@@ -1,0 +1,76 @@
+<script type="text/javascript" src="../dist/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../dist/assets/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../dist/assets/js/helper.js"></script>
+
+<script src="/plugins/alerts/jquery.alerts.js"></script>
+<script src="/plugins/validate/jquery.validate-min.js"></script>
+<script src="/js/settings.js"></script>
+
+<!-- keep:before_login -->
+<script type="text/javascript">
+  document.write(
+    '\
+	<script src="/func/jsx/global.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+	<script src="/func/jsx/cms.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+	<script src="../dist/assets/js/common.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+	<script src="../dist/assets/js/template.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+  ',
+  );
+</script>
+<!-- /keep -->
+
+<!-- keep:after_login -->
+<script src="/js/ws.js"></script>
+<script type="text/javascript">
+  document.write(
+    '\
+	<script src="/func/jsx/global.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+	<script src="/func/jsx/cms.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+	<script src="../dist/assets/js/common.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+    <script src="../dist/assets/js/template-secure.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+	<script src="/js/wovs.js?' +
+      Math.random() +
+      '"><' +
+      '/script>\
+  ',
+  );
+</script>
+<!-- /keep -->
+
+<script src="/js/core.js"></script>
+<script src="/js/common.js"></script>
+
+<!-- delete:onProd -->
+<script>
+  var cssRand = setInterval(() => {
+    var numb = 3;
+    var randomCssUrl = $($('head [rel="stylesheet"][href]')[numb]).attr('href').split('?')[0];
+    $($('head [rel="stylesheet"][href]')[numb]).attr('href', randomCssUrl + '?' + Math.random());
+    clearInterval(cssRand);
+  }, 1000);
+</script>
+<!-- /delete -->

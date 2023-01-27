@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- build:section layout.head -->
+    <!-- /build -->
+  </head>
+
+  <body>
+    <!-- build:section layout.header -->
+    <!-- /build -->
+
+    <section class="relative flex flex-col-reverse">
+      <div class="w-full">
+        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
+      </div>
+      <div class="bg-blueViolet">
+        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
+          <i class="fa-solid fa-volume-high"></i>
+          <!-- delete:onProd -->
+          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+          </marquee>
+          <!-- /delete -->
+        </div>
+      </div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
+      </div>
+    </section>
+
+    <!-- build:section layout.navAdmin -->
+    <!-- /build -->
+
+    <section class="wrapper">
+      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
+        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>Transfer</span></div>
+
+        <form id="confirm-form" action="/ajax/cm/requests" method="post" novalidate="novalidate">
+          <div class="form-container space-y-3">
+            <div class="dropdown flex flex-col">
+              <label class="font-bold text-blueViolet"> FROM</label>
+              <select id="gameIdTransfer" name="gameIdTransfer" class="required gameIdTransfer h-8 bg-slate-200 px-5 py-1 focus:outline-none">
+                <option value="">PLEASE SELECT</option>
+              </select>
+            </div>
+
+            <div class="dropdown flex flex-col">
+              <label class="font-bold text-blueViolet"> TO</label>
+              <select id="reqType" name="reqType" class="required reqType h-8 bg-slate-200 px-5 py-1 focus:outline-none">
+                <option value="">PLEASE SELECT</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col">
+              <label class="font-bold text-blueViolet"> AMOUNT</label>
+              <input type="text" id="amountTransfer" name="amountTransfer" class="required h-8 bg-slate-200 px-5 py-1 focus:outline-none" placeholder="INSERT AMOUNT" />
+            </div>
+          </div>
+
+          <div class="button-submit-center mx-auto mt-10 w-fit">
+            <button type="submit" class="button btn-process bg-dandelion px-5 py-1">PROCESS</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- build:section layout.overlay -->
+    <!-- /build -->
+
+    <!-- build:section layout.mobilemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.sidemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.footer -->
+    <!-- /build -->
+
+    <!-- build:section layout.script -->
+    <!-- /build -->
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.gameIdTransfer').append(new Option('Dompet Utama - ' + globalObj.credit, -6, false, false));
+        //$('.reqType').append(new Option("Dompet Utama - "+globalObj.credit, -6, false, false));
+
+        //ajaxCaller('get', '/ajax/cm/getPlayerGameInfo', '', function(res){
+        ajaxCaller('get', '/ajax/cm/getPlayerGameTransferInfoList', '', function (res) {
+          for (var i = 0; i < res[1].length; i++) {
+            var data = res[1][i];
+
+            $('.gameIdTransfer').append(new Option(data[0] + ' - ' + data[2], data[3], false, false));
+            //$('.reqType').append(new Option(data[0]+" - "+data[2], data[3], false, false));
+          }
+        });
+
+        $(document).on('change', '.gameIdTransfer', function () {
+          var val = $(this).val();
+
+          if (val == '-6') {
+            //ajaxCaller('get', '/ajax/cm/getPlayerGameInfo', '', function(res){
+            ajaxCaller('get', '/ajax/cm/getPlayerGameTransferInfoList', '', function (res) {
+              $('.reqType').empty();
+              $('.reqType').append(new Option('PLEASE SELECT', '', false, false));
+              for (var i = 0; i < res[1].length; i++) {
+                var data = res[1][i];
+                if (data[6] == 300) {
+                  continue;
+                }
+                $('.reqType').append(new Option(data[0] + ' - ' + data[2], data[3], false, false));
+              }
+            });
+          } else {
+            $('.reqType').empty();
+            $('.reqType').append(new Option('Dompet Utama - ' + globalObj.credit, -6, false, false));
+          }
+        });
+      });
+
+      function confirmChecking() {
+        var flag = $('#confirm-form').valid();
+        if (flag) {
+          var amount = $('#confirm-form #amountTransfer').val();
+          amount = parseCurrency(amount);
+          if (amount > 0) {
+            confirmMsg(messages.confirmTransferAmt + amount, 'Transfer', '#confirm-form', true);
+          } else {
+            alertMsg(messages.amountReq);
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+
+      function confirmChecking2() {
+        var flag = $('#confirm-form-2').valid();
+        if (flag) {
+          var amount = $('#confirm-form-2 #amountTransfer').val();
+          amount = parseCurrency(amount);
+          if (amount > 0) {
+            confirmMsg(messages.confirmTransferAmt + amount, 'Transfer', '#confirm-form-2', true);
+          } else {
+            alertMsg(messages.amountReq);
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+
+      function successCallBack() {
+        window.location = '/secure/admin/history-transfer.html';
+      }
+    </script>
+  </body>
+</html>

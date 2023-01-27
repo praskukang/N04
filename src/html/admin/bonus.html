@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- build:section layout.head -->
+    <!-- /build -->
+  </head>
+
+  <body>
+    <!-- build:section layout.header -->
+    <!-- /build -->
+
+    <section class="relative flex flex-col-reverse">
+      <div class="w-full">
+        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
+      </div>
+      <div class="bg-blueViolet">
+        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
+          <i class="fa-solid fa-volume-high"></i>
+          <!-- delete:onProd -->
+          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+          </marquee>
+          <!-- /delete -->
+        </div>
+      </div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
+      </div>
+    </section>
+
+    <!-- build:section layout.navAdmin -->
+    <!-- /build -->
+
+    <section class="wrapper">
+      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
+        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>bonus code</span></div>
+
+        <form id="ajax-form" action="/ajax/bonus/codeRequest" method="post" class="hidden">
+          <input type="text" id="code" name="code" class="form-control required textfield1" />
+          <button type="submit" class="btn CommonBtt2">Submit</button>
+        </form>
+
+        <div class="mt-7 table">
+          <div class="table-warp">
+            <table class="bonusHis w-full table-fixed border-separate text-center capitalize">
+              <thead>
+                <tr class="bg-slate-400">
+                  <th class="center">no.</th>
+                  <th>date &amp; time</th>
+                  <th>promotion</th>
+                  <th>code</th>
+                  <th class="center">credit</th>
+                  <th class="center">expired</th>
+                  <th class="center">status</th>
+                </tr>
+              </thead>
+
+              <tbody class="bg-slate-600 text-white">
+                <!-- delete:onProd -->
+                <tr>
+                  <td>1</td>
+                  <td>17-Jun-2021 17:46</td>
+                  <td>Deposit</td>
+                  <td>20,000</td>
+                  <td>Success</td>
+                  <td>Success</td>
+                  <td>Success</td>
+                </tr>
+
+                <!-- /delete -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- build:section layout.overlay -->
+    <!-- /build -->
+
+    <!-- build:section layout.mobilemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.sidemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.footer -->
+    <!-- /build -->
+
+    <!-- build:section layout.script -->
+    <!-- /build -->
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(document).on('click', '.btn-claim', function () {
+          var code = $(this).attr('code');
+          $('#code').val(code);
+          $('#ajax-form').submit();
+        });
+
+        function dayLeave(dateEnd) {
+          var dateCurrent = new Date().getTime(),
+            dateCreated = new Date(dateEnd).getTime(),
+            //dateExpired = new Date(dateCreated + ( data[5] * 24 * 60 * 60 * 1000)),
+            totalDay = Math.floor((dateCreated - dateCurrent) / (1000 * 60 * 60 * 24));
+
+          return totalDay;
+        }
+
+        ajaxCaller('get', '/ajax/bonus/getCodeSummary', '', function (res) {
+          if (res[1].length) {
+            for (var i = 0; i < res[1].length; i++) {
+              var data = res[1][i];
+
+              var $bs = '',
+                expired = '',
+                validationEndDate = '',
+                claimEndDate = '';
+
+              if (data[7]) {
+                claimEndDate = dayLeave(data[7]);
+                if (claimEndDate < 0) {
+                  expired = 'expired';
+                  if (data[4] == '10') {
+                    $bs = messages.bonusInvalid;
+                  }
+                } else if (claimEndDate == 0) {
+                  expired = 'today';
+                } else {
+                  expired = claimEndDate + ' days left';
+                }
+                if (data[4] == '35') {
+                  expired = 'expired';
+                }
+              } else {
+                if (data[6]) {
+                  validationEndDate = dayLeave(data[6]);
+                  if (validationEndDate < 0) {
+                    expired = 'expired';
+                    if (data[4] == '10') {
+                      $bs = messages.bonusInvalid;
+                    }
+                  } else if (validationEndDate == 0) {
+                    expired = 'today';
+                  } else {
+                    expired = validationEndDate + ' days left';
+                  }
+                  if (data[4] == '35') {
+                    expired = 'expired';
+                  }
+                } else {
+                  expired = '-';
+                }
+              }
+
+              if (!$bs) {
+                if (data[4] == '10') {
+                  $bs = '<button class="btn-gold btn-claim" code="' + data[2] + '">' + messages.bonusClaim + '</button>';
+                } else if (data[4] == '20') {
+                  $bs = messages.bonusPending;
+                } else if (data[4] == '25') {
+                  $bs = messages.bonusProcess;
+                } else if (data[4] == '30') {
+                  $bs = messages.bonusApproved;
+                  expired = '-';
+                } else if (data[4] == '32') {
+                  $bs = messages.bonusClaimed;
+                  expired = '-';
+                } else if (data[4] == '35') {
+                  $bs = messages.bonusInvalid;
+                  expired = 'expired';
+                } else if (data[4] == '40') {
+                  $bs = messages.bonusRejected;
+                  expired = 'expired';
+                }
+              }
+
+              //bonus.creationDate,bonus.code, bonus.bonusAmt, bonus.status
+              $('.bonusHis tbody').append(
+                $('<tr>')
+                  .prop('id', 'row-' + data[0])
+                  .append($('<td class="center">').text(i + 1))
+                  .append($('<td>').text(data[0]))
+                  .append($('<td>').text(data[1]))
+                  .append($('<td>').text(data[2]))
+                  .append($('<td>').text(formatNumber(data[3])))
+                  .append($('<td class="center">').append(expired))
+                  .append($('<td class="center">').append($bs)),
+              );
+            }
+          } else {
+            $('.bonusHis tbody').append('<tr class="dd-center"><td colspan="7">' + messages.nodata + '</td></tr>');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

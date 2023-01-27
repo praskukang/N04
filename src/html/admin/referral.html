@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- build:section layout.head -->
+    <!-- /build -->
+    <link rel="stylesheet" href="../dist/assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../dist/assets/css/datepicker-custom.css" />
+  </head>
+
+  <body>
+    <!-- build:section layout.header -->
+    <!-- /build -->
+
+    <section class="relative flex flex-col-reverse">
+      <div class="w-full">
+        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
+      </div>
+      <div class="bg-blueViolet">
+        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
+          <i class="fa-solid fa-volume-high"></i>
+          <!-- delete:onProd -->
+          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+          </marquee>
+          <!-- /delete -->
+        </div>
+      </div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
+      </div>
+    </section>
+
+    <!-- build:section layout.navAdmin -->
+    <!-- /build -->
+
+    <section class="wrapper">
+      <div class="mx-auto mb-20 w-4/5 space-y-3 py-10 text-black md:w-3/5">
+        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>Referral</span></div>
+
+        <div class="referral-info mt-7 w-full space-y-3">
+          <div class="referral-qr flex w-full items-center font-bold uppercase text-blueViolet">
+            <div class="rounded-md bg-slate-200 p-2">
+              <!-- delete:onProd -->
+              <img
+                class="qr"
+                id="qr-ref-d"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABS9JREFUeF7tne2y2jAMROH9H5pOmaETpgk6ttZCCdu/KLK8R5I/wqX3x+PxuPnfZRW4G/Bl2T4nZsDX5mvAF+drwAZ8dQUuPj+vwb8M+H6/t5k+Pc3txbz3LJ1b5tkK8SJdPlYwFaHDRF4xGPA7DQMOstMVXFG+t9stakWu4H0QrmBX8LsCtJIyhU3X0b0xMvsGOrdMfNW6DFcwFaF6Ip9aNI2Fzs2AqaIHdhkBXcHJXTTN8gxjAz7YMO3cS0Q83KI3WkZije7UM0lO9xdRzBLA6rZIK5iOmznL0mepHYVO/RnwwRlanRwUiAH//RYCXGvUkPbEp+ConQEb8DMHaMK4RQ+I5QpOiqUWMLPTpMuAegy36IEWrRY/anejxyS6R1iZ+Kc+Jhlw/JbNgBdedLiCB9b0ivZZMYbX4OQaXNG26QbNFbyggg14wdukDpn6qfVlKi5z4dBBl8ttslzBruD0VWCmI5xyk0WDpnZUQOqP2tFxqR0dl9rNjCtp0TRAajczEeq7cq1WxLT1MaOLAW8UpAJSOwM+UKC7gN3je6v6Tz/hcKaJKKqFzpfaKWIqb9HqoKk/9XlU7Y/OQ20XXa8Or8HqAKk/NRC1PzoPtZ0BD9xt09abuaEy4AMF1BWn9qcGR/25gl3B5/2lO9oqabXuVU1UIbTSvmV36h9hMeA4bQw40MgVHCfRMgtXcCytK/iXK5hWCN2cZPzFuZq3+NZmjJ6/Z2a47CYrI9bMRBTPZGLOrNUGrKAHfBgwEOllkhFrYBipaSZmV/DBjZKUUNLZzwGmetE1hNqpx6X+qF3FPOjGNYpZckyiE6Z2UdCvz9X+vjUuPV3MLAMGTKlu7NSJZcAHENRCU9bqcQ3YgJ8KnLJF06qZmdzoWl1RmRXz2Gr69TXYgKkC/OelDLjZn61SxDMdxhVcvDt2iz5I5wphZirkU/V18Cd5m5QRn7anTnYdwFE9DJgqdaJWjjdZKw/gE7q2ecQV3AbFmkAMeI2ubbxeBjBVNNPK1c/Sd7rd7fa0n9nMLjsH0wANeP+GiuoXFaEBT+yOaYvO2Blw0R+VfauVG7ABR935+bmkRaORFhhVtMDMGOrqn6lqA96opgai9mfAA68BqViu4AWtl7rMiG/AVOUv2hlw/D0tydukCsZ0PcvEoh4j448+G91uGfDEJosmEYWkXi62/gzYgGm+rrXLVAONTD1Gxh991i2a0k0esTJtNvOsHHDkcEDPQ9Nv7Y5p7LS6Mv7os5Hd8BpswPy/fo3Ef32+UlMDphSKN2MTYe0+YsATSrpFT4j2dnZr9F+8ZzZAVIb2LZp+7SYjFq0aapeJJQOOakXnESWHpEXToDOiZiZM46NjGDBVYODsScWndplko9OriMUVPPDzTRkg6oShsRiwAR//4rv6RimT5VGmfmqbdB609Vb4o1pFMZ96kxVN7vV5BRB1AhowpTvw9VrqsiJhDJjSMGCvwQO58jR1BQ8oljkO0AsM2u4qwKnX6sjfqTdZBrzgW5W04mgRU3/UrmJcOkaHjuAK3tDqAER9njdgA37PqWhRp+1Lkal0DVbHXFHpdGMY6S2p4GiQ0c+pgAYcK2vAsUb/WdAEpK5XJqoBUwrFa7VbdPI14ATXf49cuoIzwmSepefgq9hRraIN5HCLpgOr7a4Cjs6D6mfAAy8HaOutsDPgk4JzBR+kLhXmKnYlFUwHsV1fBU79O1l9Ze0TmQH3YbEkEgNeImsfpwbch8WSSAx4iax9nBpwHxZLIjHgJbL2cfoH0NrnEUjWnpEAAAAASUVORK5CYII="
+                height="120"
+                width="120"
+              />
+              <!-- /delete -->
+              <img class="qr" id="qr-ref-d" src="" />
+            </div>
+
+            <div class="ml-5 flex flex-col space-y-2 sm:w-full sm:flex-row sm:items-center sm:justify-around sm:space-y-0">
+              <div class="total">
+                <span class="numb total-ref-dl"> - </span>
+                <span>total downline</span>
+              </div>
+
+              <div class="total">
+                <span class="numb total-ref-inc"> - </span>
+                <span>total incentive</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="referral-link">
+            <div class="flex flex-col">
+              <label class="font-bold uppercase text-blueViolet"> Referral Link</label>
+              <div class="flex-col space-y-2">
+                <!-- <input type="text" class="link refLink h-8 bg-slate-200 px-5 py-1 focus:outline-none" value="" disabled /> -->
+                <div class="refLink h-8 bg-slate-200 px-5 py-1">-</div>
+                <button id="copyBtn" class="btn-process copyBtn bg-dandelion px-5 py-1" data-clipboard-text="">Copy URL <i class="fa-solid fa-copy"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 filter">
+          <div class="flex flex-col">
+            <label class="font-bold text-blueViolet"> SELECT DATE</label>
+            <div class="input-group filter">
+              <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+                <input type="text" id="searchDateFrom" name="searchDateFrom" class="datepicker h-8 bg-slate-200 px-5 py-1 focus:outline-none" />
+                <span>-</span>
+                <input type="text" id="searchDateTo" name="searchDateTo" class="datepicker h-8 bg-slate-200 px-5 py-1 focus:outline-none" />
+              </div>
+              <button class="btn-process btn-ref-search mt-3 bg-dandelion px-5 py-1">PROCESS</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <div class="table-title text-center font-bold text-blueViolet">REFERRAL INFO (<span class="total-ref-dl-info">0</span>)</div>
+
+          <div class="table-warp overflow-x-auto whitespace-nowrap">
+            <table class="dd-dl">
+              <thead>
+                <tr class="border-separate bg-slate-400">
+                  <th class="px-5 py-2">NAMA PENGGUNA</th>
+                  <th class="px-5 py-2">TOTAL W/L</th>
+                  <th class="px-5 py-2">HITUNGAN SETORAN</th>
+                  <th class="px-5 py-2">JUMLAH SETORAN</th>
+                  <th class="px-5 py-2">TANGGAL SETORAN TERAKHIR</th>
+                  <th class="px-5 py-2">TANGGAL PENDAFTARAN</th>
+                </tr>
+              </thead>
+
+              <tbody class="bg-slate-600 text-white">
+                <tr>
+                  <td class="dd no" colspan="6">Search by date range</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table">
+          <div class="table-title text-center font-bold text-blueViolet">REFERRAL INCENTIVE</div>
+
+          <div class="table-warp">
+            <table class="ref-dbox-data w-full table-fixed text-center">
+              <thead>
+                <tr class="border-separate bg-slate-400 capitalize">
+                  <th>total record (<span class="total-record">0</span>)</th>
+                  <th>total amount (<span class="total-amount">0</span>)</th>
+                </tr>
+              </thead>
+
+              <tbody class="bg-slate-600 text-white">
+                <tr>
+                  <td class="dd no" colspan="2">Search by date range</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- build:section layout.overlay -->
+    <!-- /build -->
+
+    <!-- build:section layout.mobilemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.sidemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.footer -->
+    <!-- /build -->
+
+    <!-- build:section layout.script -->
+    <!-- /build -->
+
+    <script src="/js/qrious.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery-ui-effecs.min.js"></script>
+    <script src="/js/date.format.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.datepicker, .datepicker2')
+          .datepicker({
+            showButtonPanel: true,
+            dateFormat: 'yy-mm-dd',
+            maxDate: new Date(),
+            defaultDate: new Date(),
+          })
+          .datepicker('setDate', new Date());
+
+        var clipboard = new ClipboardJS('.copyBtn');
+
+        clipboard.on('success', function (e) {
+          alertMsg('Copied to clipboard: ' + e.text);
+          e.clearSelection();
+        });
+
+        ajaxCaller('get', '/ajax/account/getAccountDto', '', function (res) {
+          $('.refLink').val(res[6]);
+          $('.copyBtn').attr('data-clipboard-text', res[6]);
+
+          var qr = (window.qr = new QRious({
+            element: document.getElementById('qr-ref-d'),
+            size: 120,
+            value: res[6],
+          }));
+
+          var qrM = (window.qrM = new QRious({
+            element: document.getElementById('qr-ref-m'),
+            size: 120,
+            value: res[6],
+          }));
+        });
+
+        ajaxCaller('get', '/ajax/mlm/getReferralInfo', '', function (res) {
+          var totalINC = res[1],
+            totalDL = res[2];
+
+          if (!totalINC) {
+            totalINC = '0';
+          }
+          if (!totalDL) {
+            totalDL = '0';
+          }
+
+          $('.total-ref-inc').text(totalINC);
+          $('.total-ref-dl').text(totalDL);
+        });
+
+        $(document).on('click', '.btn-ref-search', function () {
+          getReferralIncentiveSumm($('#searchDateFrom').val(), $('#searchDateTo').val());
+        });
+
+        function getReferralIncentiveSumm(dateform, dateto) {
+          $('.ref-dbox-data tbody').empty().append('<tr><td class="dd no" colspan="2">Loading ...</td></tr>');
+          $('.dd-dl tbody').empty().append('<tr><td class="dd no" colspan="6">Loading ...</td></tr>');
+
+          ajaxCaller('get', '/ajax/mlm/getReferralIncentiveSumm', 'refFrDate=' + dateform + '&refToDate=' + dateto, function (res) {
+            $('.ref-dbox-data tbody').empty();
+            $('.dd-dl tbody').empty();
+
+            if (res[1].length > 0) {
+              var totalRecords = 0,
+                totalAmount = 0;
+
+              for (var i = 0; i < res[1].length; i++) {
+                var data = res[1][i];
+
+                $('.ref-dbox-data tbody').append('<tr class="ddt show-rd" dd="' + data[0] + '"><td class="dd1">' + data[1] + '</td><td class="dd2">' + data[2] + '<span class="arr"></span></td></tr>');
+
+                totalRecords++;
+                totalAmount = totalAmount + data[2];
+
+                //call downline func
+                $('.dd-dl tbody').empty();
+                showDL(data[0]);
+              }
+
+              $('.total-record').text(totalRecords);
+              $('.total-amount').text(totalAmount);
+            } else {
+              $('.ref-dbox-data tbody').append('<tr><td class="dd no" colspan="2">No data</td></tr>');
+              $('.dd-dl tbody').append('<tr><td class="dd no" colspan="6">No data</td></tr>');
+            }
+          });
+        }
+
+        function showDL(dd) {
+          ajaxCaller('get', '/ajax/mlm/getReferralIncentiveDetail', 'refBonusId=' + dd, function (res) {
+            if (res[1].length > 0) {
+              for (var i = 0; i < res[1].length; i++) {
+                var data = res[1][i];
+                $('.dd-dl tbody').append(`<tr><td>${data[1]}</td><td>${data[0]}</td><td>${data[4]}</td><td>${data[2]}</td><td>${data[3]}</td><td>${data[5]}</td></tr>`);
+              }
+            } else {
+              $('.dd-dl tbody').append('<tr><td class="dd no" colspan="6">No data</td></tr>');
+            }
+          });
+
+          ajaxCaller('get', '/ajax/mlm/getReferralInfo', '', function (res) {
+            var totalDL = res[2];
+            if (!totalDL) {
+              totalDL = '0';
+            }
+            $('.total-ref-dl-info').text(totalDL);
+          });
+        }
+
+        $(document).on('click', '.show-rd', function () {
+          var dd = $(this).attr('dd');
+
+          if ($(this).closest('.dd').hasClass('aaa')) {
+            $(this).closest('.dd').removeClass('aaa');
+            $(this).closest('.dd').find('.ddb').hide();
+          } else {
+            $(this)
+              .closest('.dd')
+              .addClass('rd-' + dd + ' aaa');
+
+            if ($(this).closest('.dd').find('.ddb').length) {
+              $(this).closest('.dd').find('.ddb').show();
+            } else {
+              $(this).closest('.dd').append(
+                '\
+			<div class="ddb">\
+				<div class="table-responsive">\
+				<table> \
+					<thead>\
+					<tr>\
+						<td>No</td>\
+						<td>Name</td>\
+						<td>Type</td>\
+						<td>Total</td>\
+						<td>Bonus Amount</td>\
+					</tr>\
+					</thead>\
+					<tbody>\
+					<tr><td colspan="5">Loading ...</td></tr>\
+					</tbody>\
+				</table>\
+				</div>\
+			</div>\
+			',
+              );
+
+              ajaxCaller('get', '/ajax/mlm/getReferralIncentiveDetail', 'refBonusId=' + dd, function (res) {
+                $('.rd-' + dd + ' tbody').empty();
+
+                if (res[1].length > 0) {
+                  for (var i = 0; i < res[1].length; i++) {
+                    var data = res[1][i];
+
+                    var type = data[5];
+                    if (type == 1) {
+                      type = 'Winning';
+                    } else if (type == 2) {
+                      type = 'Turnover';
+                    }
+
+                    $('.rd-' + dd + ' tbody').append(
+                      '\
+						<tr>\
+						<td>' +
+                        (i + 1) +
+                        '</td>\
+						<td>' +
+                        data[1] +
+                        '</td>\
+						<td>' +
+                        type +
+                        '</td>\
+						<td>' +
+                        data[3] +
+                        '</td>\
+						<td>' +
+                        data[4] +
+                        '</td>\
+						</tr>\
+					',
+                    );
+                  }
+                } else {
+                  $('.rd-' + dd + ' tbody').append('<tr><td colspan="5">No data</td></tr>');
+                }
+              });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

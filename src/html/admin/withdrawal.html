@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- build:section layout.head -->
+    <!-- /build -->
+  </head>
+
+  <body>
+    <!-- build:section layout.header -->
+    <!-- /build -->
+
+    <section class="relative flex flex-col-reverse">
+      <div class="w-full">
+        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
+      </div>
+      <div class="bg-blueViolet">
+        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
+          <i class="fa-solid fa-volume-high"></i>
+          <!-- delete:onProd -->
+          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+          </marquee>
+          <!-- /delete -->
+        </div>
+      </div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
+      </div>
+    </section>
+
+    <!-- build:section layout.navAdmin -->
+    <!-- /build -->
+
+    <section class="wrapper">
+      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
+        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>withdrawal</span></div>
+
+        <div class="my-7 flex items-center border-2 border-blueViolet bg-slate-200 p-2 px-5">
+          <div class="w-1/2">
+            <div class="font-bold text-blueViolet">Minimum Withdraw</div>
+            <div class="desc">
+              <span class="minReq">-</span>
+            </div>
+          </div>
+          <div class="w-1/2">
+            <div class="font-bold text-blueViolet">Maximum Withdraw</div>
+            <div class="desc">
+              <span class="maxReq">-</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="confirm-form" action="/ajax/cm/reqWithdraw" method="post" novalidate="novalidate">
+          <div class="form-container space-y-3">
+            <div class="dropdown flex flex-col">
+              <label class="font-bold text-blueViolet"> FROM</label>
+              <select id="gameIdWd" name="gameIdWd" class="gameIdWd wdgame h-8 bg-slate-200 px-5 py-1 focus:outline-none">
+                <option value="">Select Wallet</option>
+              </select>
+            </div>
+
+            <div class="w-amo-av hide flex flex-col">
+              <label class="font-bold text-blueViolet"> AVAILABLE CREDIT TO WITHDRAW</label>
+              <p class="w-amo-av-dd">-</p>
+            </div>
+
+            <div class="w-amo hide flex flex-col">
+              <label class="font-bold text-blueViolet"> TOTAL (CR)</label>
+              <input type="text" id="amountWd" name="amountWd" class="amo required h-8 bg-slate-200 px-5 py-1 focus:outline-none" placeholder="" />
+            </div>
+          </div>
+
+          <div class="my-7 flex items-center border-2 border-blueViolet bg-slate-200 p-2 px-5">
+            <div class="w-1/2">
+              <div class="font-bold text-blueViolet">Bank Account No</div>
+              <div class="desc">
+                <span class="bankAccNo">-</span>
+              </div>
+            </div>
+            <div class="w-1/2">
+              <div class="font-bold text-blueViolet">Bank Account Name</div>
+              <div class="desc">
+                <span class="bankAccName">-</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-submit-center mx-auto mt-10 w-fit">
+            <button type="submit" class="button btn-process bg-dandelion px-5 py-1">PROCESS</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- build:section layout.overlay -->
+    <!-- /build -->
+
+    <!-- build:section layout.mobilemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.sidemenu -->
+    <!-- /build -->
+
+    <!-- build:section layout.footer -->
+    <!-- /build -->
+
+    <!-- build:section layout.script -->
+    <!-- /build -->
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        ajaxCaller('get', '/ajax/credit/getWithdrawView', '', function (res) {
+          $('.minReq').text(formatNumber(res[1]));
+          $('.maxReq').text(formatNumber(res[2]));
+        });
+
+        ajaxCaller('get', '/ajax/credit/getUserBank', '', function (res) {
+          $('.bankAccNo').text(res[2]);
+          $('.bankAccName').text(res[3]);
+        });
+
+        ajaxCaller('get', '/ajax/cm/getP2PGameInfo', '', function (res) {
+          $('.gameIdWd').append('<option value="">Dompet Utama</option>');
+          for (var i = 0; i < res[1].length; i++) {
+            var data = res[1][i];
+            // $('.gameIdWd').append(new Option(data[0], data[3], false, false));
+            $('.gameIdWd').append('<option value="' + data[3] + '" cid="' + data[4] + '">' + data[0] + '</option>');
+          }
+        });
+
+        $(document).on('change', '.wdgame', function () {
+          var val = $(this).val(),
+            cid = $(this).find('option:selected').attr('cid');
+
+          $('.w-amo').addClass('hide');
+          $('.w-amo-av').removeClass('hide');
+          $('.w-amo-av-dd').text('Loading...');
+
+          if (cid == 50 || cid == 60) {
+            $.ajax({
+              type: 'POST',
+              url: '/ajax/cma/gameWalletRefresh',
+              dataType: 'json',
+              data: 'gameIdId=' + val,
+              success: function (res) {
+                $('.w-amo-av-dd').text(res[1]);
+                $('.w-amo').removeClass('hide');
+              },
+              error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR.responseText);
+              },
+            });
+
+            return false;
+          }
+
+          if (!val) {
+            ajaxCaller('get', '/ajax/cm/getPlayerGameInfo', '', function (res) {
+              var agl = [],
+                pd = {};
+
+              for (var i = 0; i < res[1].length; i++) {
+                var data = res[1][i],
+                  currAmo,
+                  currGameID;
+
+                // collect user current available game
+                agl.push(data[5]);
+                pd[data[6]] = data[0];
+
+                wg = data[2];
+                currAmo = wg.replace(',', '');
+                currAmo = Math.floor(currAmo);
+
+                currGameID = data[3];
+
+                if (currAmo >= 1) {
+                  if (data[4] != 50 && data[4] != 60) {
+                    gwOut(currGameID);
+                  }
+                }
+
+                //done looping
+                if (i == res[1].length - 1) {
+                  setTimeout(function () {
+                    ajaxCaller('get', '/ajax/account/getAccountDto', '', function (res) {
+                      wm = res[2];
+                      $('.w-amo-av-dd').text(wm);
+                      $('.w-amo').removeClass('hide');
+                    });
+                  }, 2000);
+                }
+                //exit done looping
+              }
+            });
+          }
+        });
+      });
+
+      function gwOut(gameID) {
+        $.ajax({
+          type: 'POST',
+          url: '/ajax/cma/gameWalletRefresh',
+          dataType: 'json',
+          data: 'gameIdId=' + gameID,
+          success: function (res) {
+            var gwAmo = res[1],
+              latestAmo;
+
+            latestAmo = gwAmo.replace(',', '');
+            latestAmo = Math.floor(latestAmo);
+
+            $.ajax({
+              type: 'POST',
+              url: '/ajax/cm/requests',
+              dataType: 'json',
+              data: 'gameIdTransfer=' + gameID + '&reqType=-6&amountTransfer=' + latestAmo,
+              success: function (res) {},
+              error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR.responseText);
+              },
+            });
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
+          },
+        });
+      }
+
+      function confirmChecking() {
+        var flag = $('#confirm-form').valid();
+        if (flag) {
+          var amount = $('#confirm-form #amountWd').val();
+          amount = parseCurrency(amount);
+          if (amount > 0) {
+            confirmMsg(messages.confirmWdAmt + amount, 'Withdraw', '#confirm-form', true);
+          } else {
+            alertMsg(messages.amountReq);
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+
+      function confirmChecking2() {
+        var flag = $('#confirm-form-2').valid();
+        if (flag) {
+          var amount = $('#confirm-form-2 #amountWd').val();
+          amount = parseCurrency(amount);
+          if (amount > 0) {
+            confirmMsg(messages.confirmWdAmt + amount, 'Withdraw', '#confirm-form-2', true);
+          } else {
+            alertMsg(messages.amountReq);
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+
+      function successCallBack() {
+        window.location = '/secure/admin/history.html';
+      }
+    </script>
+  </body>
+</html>
