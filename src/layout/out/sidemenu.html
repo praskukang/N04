@@ -1,11 +1,17 @@
-<section class="mobile-sidemenu fixed top-0 -right-full z-30 h-screen w-1/2 bg-purple duration-300 ease-in-out sm:hidden">
+<section class="mobile-sidemenu fixed top-0 -left-full z-30 h-screen w-1/2 bg-myrtle p-5 duration-300 ease-in-out sm:hidden">
+  <!-- delete:onProd -->
+  <div class="border-b-2 border-straw py-5">
+    <img src="../dist/assets/img/part/logo.png" alt="" />
+  </div>
+  <!-- /delete -->
+
   <!-- keep:after_login -->
   <div class="flex flex-col items-center justify-center space-y-2 bg-slate-100 py-5">
     <a href="admin/profile.html" class="bg-dandelion px-3 uppercase text-white">my account</a>
     <div class="flex items-center space-x-2 text-black">
       <i class="fa-solid fa-copyright"></i>
       <span class="block leading-3">credit :</span>
-      <span class="g8-bal-total font-semibold text-dandelion">0.00</span>
+      <span class="g8-bal-total text-dandelion font-semibold">0.00</span>
     </div>
     <div class="relative flex items-center justify-center">
       <div class="flex items-center space-x-2 bg-slate-300 py-0.5 px-4 font-semibold capitalize text-black">
@@ -18,84 +24,68 @@
     </div>
   </div>
   <!-- /keep -->
-  <div class="h-full overflow-hidden">
-    <ul class="h-full overflow-y-auto pb-96 uppercase">
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="index.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>home</span>
-          <img src="../dist/assets/img/menu/menu_home.webp" alt="home" class="h-9 w-9" />
+  <div class="h-full py-5 font-bold capitalize">
+    <ul class="grid grid-flow-row grid-cols-2 gap-2">
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="sportsbook.html" class="relative">
+          <img src="../dist/assets/img/home/sb.png" alt="sport" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">sport</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="promotions.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>promotion</span>
-          <img src="../dist/assets/img/menu/menu_promo.webp" alt="promotion" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="slots.html" class="relative">
+          <img src="../dist/assets/img/home/sg.png" alt="slots" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">slots</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="sportsbook.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>sportsbook</span>
-          <img src="../dist/assets/img/menu/menu_sport.webp" alt="sportsbook" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="livecasino.html" class="relative">
+          <img src="../dist/assets/img/home/lc.png" alt="casino" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">casino</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="slots.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>slots games</span>
-          <img src="../dist/assets/img/menu/menu_slot.webp" alt="slots games" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="gaple.html" class="relative">
+          <img src="../dist/assets/img/home/gp.png" alt="gaple" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">gaple</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="livecasino.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>livecasino</span>
-          <img src="../dist/assets/img/menu/menu_casino.webp" alt="livecasino" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="poker.html" class="relative">
+          <img src="../dist/assets/img/home/pk.png" alt="poker" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">poker</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="gaple.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>gaple</span>
-          <img src="../dist/assets/img/menu/menu_gaple.webp" alt="gaple" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="tangkas.html" class="relative">
+          <img src="../dist/assets/img/home/tk.png" alt="tangkas" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">tangkas</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="poker.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>poker</span>
-          <img src="../dist/assets/img/menu/menu_poker.webp" alt="poker" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="fish.html" class="relative">
+          <img src="../dist/assets/img/home/fish.png" alt="fish" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">fish</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="tangkas.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>tangkas</span>
-          <img src="../dist/assets/img/menu/menu_tangkas.webp" alt="tangkas" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="togel.html" class="relative">
+          <img src="../dist/assets/img/home/4d.png" alt="togel" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">togel</div>
         </a>
       </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="fish.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>fish</span>
-          <img src="../dist/assets/img/menu/menu_fish.webp" alt="fish" class="h-9 w-9" />
-        </a>
-      </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="togel.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>togel</span>
-          <img src="../dist/assets/img/menu/menu_togel.webp" alt="togel" class="h-9 w-9" />
-        </a>
-      </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="others.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>others</span>
-          <img src="../dist/assets/img/menu/menu_other.webp" alt="others" class="h-9 w-9" />
-        </a>
-      </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="mobile.html" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>download</span>
-          <img src="../dist/assets/img/menu/menu_dl.webp" alt="download" class="h-9 w-9" />
-        </a>
-      </li>
-      <li class="w-full pr-2 duration-200 ease-in-out hover:bg-blueViolet">
-        <a href="#" class="flex h-full w-full items-center justify-end space-x-3 py-2">
-          <span>chat</span>
-          <img src="../dist/assets/img/menu/menu_chat.webp" alt="livechat" class="h-9 w-9" />
+
+      <li class="hover:bg-blueViolet w-full pr-2 duration-200 ease-in-out">
+        <a href="others.html" class="relative">
+          <img src="../dist/assets/img/home/ot.png" alt="others" class="h-full w-full" />
+          <div class="absolute bottom-1 left-2">others</div>
         </a>
       </li>
     </ul>

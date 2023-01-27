@@ -1,46 +1,53 @@
 <section class="h-16 sm:hidden"></section>
 
-<section class="mobile-bottom-menu fixed bottom-0 z-20 h-16 w-full bg-purple sm:hidden">
-  <ul class="flex h-full w-full items-center justify-around uppercase">
+<section class="mobile-bottom-menu fixed bottom-0 z-20 w-full bg-gradient-to-b from-christi via-myrtle to-blackfores sm:hidden">
+  <div class="h-1 w-full bg-gradient-to-b from-lemon via-straw to-muesli"></div>
+  <ul class="relative flex h-full w-full items-center justify-around font-bold uppercase text-christi">
     <li class="relative h-full w-full">
-      <a href="index.html" class="flex h-full w-full flex-col items-center justify-center">
-        <img src="../dist/assets/img/menu/menu_home.webp" alt="home" class="h-9 w-9" />
+      <a href="index.html" class="flex h-full w-full flex-col items-center justify-center py-1">
+        <i class="fa-solid fa-house-chimney"></i>
         <span>home</span>
       </a>
     </li>
-    <li class="relative h-full w-full">
-      <a href="promotions.html" class="flex h-full w-full flex-col items-center justify-center">
-        <img src="../dist/assets/img/menu/menu_promo.webp" alt="promo" class="h-9 w-9" />
-        <span>promo</span>
-      </a>
-    </li>
+
     <!-- keep:before_login -->
     <li class="relative h-full w-full">
-      <div class="lg-in flex h-full w-full cursor-pointer flex-col items-center justify-center">
-        <img src="../dist/assets/img/menu/menu_depo.webp" alt="deposit" class="h-9 w-9" />
+      <div class="lg-in flex h-full w-full cursor-pointer flex-col items-center justify-center py-1">
+        <i class="fa-solid fa-dollar-sign"></i>
         <span>deposit</span>
+      </div>
+    </li>
+
+    <li class="invisible relative h-full w-full text-lemon">
+      <div class="lg-in visible absolute top-1/2 left-1/2 flex h-max w-full -translate-x-1/2 -translate-y-[70%] cursor-pointer flex-col items-center justify-center py-1">
+        <div class="btn flex h-16 w-16 items-center justify-center rounded-3xl">
+          <i class="fa-solid fa-circle-user"></i>
+        </div>
+
+        <span class="text-xl">login</span>
       </div>
     </li>
     <!-- /keep -->
 
     <!-- keep:after_login -->
     <li class="relative h-full w-full">
-      <a href="admin/deposit.html" class="flex h-full w-full flex-col items-center justify-center">
+      <a href="admin/deposit.html" class="flex h-full w-full flex-col items-center justify-center py-1">
         <img src="../dist/assets/img/menu/menu_depo.webp" alt="deposit" class="h-9 w-9" />
         <span>deposit</span>
       </a>
     </li>
     <!-- /keep -->
+
     <li class="relative h-full w-full">
-      <a href="mobile.html" class="flex h-full w-full flex-col items-center justify-center">
-        <img src="../dist/assets/img/menu/menu_dl.webp" alt="download" class="h-9 w-9" />
-        <span>download</span>
+      <a href="promotions.html" class="flex h-full w-full flex-col items-center justify-center py-1">
+        <i class="fa-solid fa-dollar-sign"></i>
+        <span>promo</span>
       </a>
     </li>
 
     <li class="relative h-full w-full">
-      <a href="#" class="flex h-full w-full flex-col items-center justify-center">
-        <img src="../dist/assets/img/menu/menu_chat.webp" alt="livechat" class="h-9 w-9" />
+      <a href="#" class="flex h-full w-full flex-col items-center justify-center py-1">
+        <i class="fa-solid fa-comments"></i>
         <span>chat</span>
       </a>
     </li>

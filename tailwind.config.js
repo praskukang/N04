@@ -14,14 +14,23 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        harmattan: ["harmattan", "sans-serif"],
+        genos: ["Genos", "sans-serif"],
       },
       colors: {
-        purple: '#5e18be',
-        blueViolet: '#842aff',
-        christalle: '#341066',
-        dandelion: '#ffcd62',
+        myrtle: '#17350d',
+        blackfores: '#1c360c',
+        christi: '#62ab22',
+        conifer: '#b0e455',
+        lemon: '#f7ff20',
+        straw: '#d7be7b',
+        primrose: '#e0da9a',
+        alpine: '#9f7f3e',
+        muesli: '#9c8850',
       },
+      backgroundImage: {
+        'home': "url('../img/home/index-bg.jpg')",
+        'page': "url('../img/part/bg.jpg')",
+      }
     },
   },
   plugins: [require('prettier-plugin-tailwindcss')],
