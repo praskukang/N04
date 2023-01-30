@@ -3,7 +3,7 @@ module.exports = {
   content: ['./local/**.html', './local/secure/admin/**.html'],
   theme: {
     screens: {
-      'ph': '425px',
+      'ph': '426px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
