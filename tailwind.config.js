@@ -3,6 +3,7 @@ module.exports = {
   content: ['./local/**.html', './local/secure/admin/**.html'],
   theme: {
     screens: {
+      'ph': '425px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -28,8 +29,8 @@ module.exports = {
         muesli: '#9c8850',
       },
       backgroundImage: {
-        'home': "url('../img/home/index-bg.jpg')",
-        'page': "url('../img/part/bg.jpg')",
+        'home': "url('../img/home/index-bg.webp')",
+        'page': "url('../img/part/bg.webp')",
       }
     },
   },

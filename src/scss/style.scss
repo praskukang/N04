@@ -5,6 +5,7 @@
 @font-face {
     font-family: "Genos";
     src: url("./fonts/font-style/Genos-VariableFont_wght.ttf");
+    font-display: swap;
 }
 
 @layer utilities {
@@ -14,12 +15,11 @@
 
     .btn {
         @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg;
-        -webkit-tap-highlight-color: transparent;
     }
+}
 
-    .tap {
-        -webkit-tap-highlight-color: transparent;
-    }
+html {
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -66,5 +66,27 @@ input {
 
     li.active {
         @apply bg-blackfores text-lemon bg-opacity-50;
+    }
+}
+
+.overlaysd.active {
+    @apply opacity-100 w-full;
+}
+
+.overlay.active {
+    @apply opacity-100 visible;
+}
+
+.popup-login.active {
+    @apply block;
+    .popLog {
+        @apply opacity-100 visible;
+    }
+}
+
+.popup-fp.active {
+    @apply block;
+    .popfp {
+        @apply opacity-100 visible;
     }
 }
