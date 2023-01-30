@@ -1162,8 +1162,8 @@ video {
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 
 .bg-opacity-90 {
@@ -2070,6 +2070,10 @@ input:focus {
   .\32xl\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-\[4vw\] {
+    font-size: 4vw;
   }
 
   .\32xl\:text-7xl {
