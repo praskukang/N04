@@ -171,6 +171,7 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{ match: /\.\.\/dist/gm, replacement: '/{cms.template.name}' },
+						{ match: /aspect/g, replacement: 'aspect-[3/1]' },
 						{
 							match: /a href="([^"]*).html"/g,
 							replacement: function (matchFile, link) {
@@ -191,6 +192,7 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{ match: /\.\.\/\.\.\/dist/gm, replacement: '/{cms.template.name}' },
+						{ match: /aspect/g, replacement: 'aspect-[3/1]' },
 						{
 							match: /a href="([^"]*).html"/g,
 							replacement: function (matchFile, link) {
@@ -268,6 +270,20 @@ module.exports = function (grunt) {
 				ext: '.html',
 				src: ['*.html'],
 				dest: 'dist/'
+			},
+			sc: {
+				expand: true,
+				cwd: 'dist/secure',
+				ext: '.html',
+				src: ['*.html'],
+				dest: 'dist/secure'
+			},
+			admin: {
+				expand: true,
+				cwd: 'dist/secure/admin',
+				ext: '.html',
+				src: ['*.html'],
+				dest: 'dist/secure/admin'
 			}
 		},
 

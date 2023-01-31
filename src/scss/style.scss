@@ -14,7 +14,11 @@
     }
 
     .btn {
-        @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg;
+        @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
+    }
+
+    .btn-play {
+        @apply text-[3.5vw] sm:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.4vw] 2xl:text-[1.2vw];
     }
 }
 
@@ -26,8 +30,16 @@ body {
     @apply text-black bg-white relative mx-auto font-genos max-w-[120rem];
 }
 
-input {
+.inp {
     @apply bg-blackfores py-1 focus:outline-none h-6;
+}
+
+input {
+    @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
+}
+
+select {
+    @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
 }
 
 .desktop-menu {
@@ -88,5 +100,26 @@ input {
     @apply block;
     .popfp {
         @apply opacity-100 visible;
+    }
+}
+
+.popup-ireg.active {
+    @apply block;
+    .popireg {
+        @apply opacity-100 visible;
+    }
+}
+
+.download-menu {
+    ul {
+        li.active {
+            @apply bg-christi text-lemon;
+        }
+    }
+}
+
+.download-content {
+    .dl-bb.active {
+        @apply block;
     }
 }

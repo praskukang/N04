@@ -75,6 +75,18 @@ $('.btn-fp').click(function () {
     $('.overlay').removeClass('active')
 })
 
+$(document).mouseup(function (e) {
+    if ($(".popup-ireg").hasClass('active') && !$(".overlay").is(e.target) && $(".overlay").has(e.target).length === 1) {
+        $(".popup-ireg").removeClass("active");
+        $('.overlay').removeClass('active')
+    }
+});
+
+$('.btn-ireg').click(function () {
+    $(".popup-ireg").removeClass("active");
+    $('.overlay').removeClass('active')
+})
+
 $('.sdMenu').click(function () {
     $('.mobile-sidemenu').addClass('active')
     $('.overlaysd').addClass('active')
