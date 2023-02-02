@@ -255,7 +255,7 @@ module.exports = function (grunt) {
 			// },
 
 			tailwind: {
-				command: ['npx tailwindcss -i ./src/css/style.css -o ./dist/assets/css/style.css'].join('&&')
+				command: ['npx tailwindcss -i ./src/css/style.css -o ./dist/assets/css/style.css --minify'].join('&&')
 			}
 
 		},
