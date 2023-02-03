@@ -9,167 +9,175 @@
     <!-- build:section layout.header -->
     <!-- /build -->
 
-    <section class="relative flex flex-col-reverse">
-      <div class="w-full">
-        <img src="../dist/assets/img/page-banner/promotion.webp" alt="" class="w-full" />
-      </div>
-      <div class="bg-blueViolet">
-        <div class="wrapper marquee flex items-center space-x-2 px-2 py-0.5">
-          <i class="fa-solid fa-volume-high"></i>
-          <div class="s-a flex w-full items-center">
+    <div class="min-h-screen bg-page bg-center pb-24 sm:pb-0">
+      <section class="relative">
+        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+          <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
+            <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
+            <div class="relative hidden md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" class="aspect-[6/1] h-8" />
+              <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
+            </div>
+            <div class="s-a flex w-full items-center">
+              <!-- delete:onProd -->
+              <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+                >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+              </marquee>
+              <!-- /delete -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="w-full">
+          <img src="../dist/assets/img/page-title/promo.webp" alt="" width="425" height="66" class="w-full" />
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper mb-20">
+          <div class="promotionInfo d text-black">
             <!-- delete:onProd -->
-            <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
-              >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
-            </marquee>
+            <ul class="promotab mb-5 flex items-center space-x-2 text-center uppercase text-white">
+              <li><a href="#" class="ptb active bg-blueViolet block w-16 2xl:w-20" d="a">all</a></li>
+              <li><a href="#" class="ptb bonus bg-blueViolet block w-16 2xl:w-20" d="bonus">bonus</a></li>
+              <li><a href="#" class="ptb slots bg-blueViolet block w-16 2xl:w-20" d="slots">slots</a></li>
+            </ul>
+            <div class="ptballbox grid grid-flow-row grid-cols-1 gap-5 md:grid-cols-2">
+              <div class="panel panel-default ptbox bonus">
+                <div class="panel-heading bg-slate-200 p-5">
+                  <div class="promoo space-y-2">
+                    <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
+                    <div class="btns flex items-center justify-end space-x-2 text-center text-white">
+                      <a class="bg-blueViolet block w-16 2xl:w-20" href="register.html"><span class="text">Register</span></a>
+                      <div class="btn-moreinfo bg-dandelion block w-16 cursor-pointer 2xl:w-20">Detail</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-content bg-slate-200 p-3">
+                  <div class="panel-body space-y-2">
+                    <h3>Promo Welcome Bonus</h3>
+                    <div>WELCOME BONUS 50%</div>
+                    <div>
+                      <ol class="list-decimal pl-5">
+                        <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
+                        <li>Minimum Deposit adalah IDR 100.000,-</li>
+                        <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
+                        <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
+                        <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
+                        <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
+                        <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
+                        <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
+                        <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
+                        <li>Syarat dan ketentuan umum RODABET berlaku</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default ptbox bonus">
+                <div class="panel-heading bg-slate-200 p-5">
+                  <div class="promoo space-y-2">
+                    <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
+                    <div class="btns flex items-center justify-end space-x-2 text-center text-white">
+                      <a class="bg-blueViolet block w-16 2xl:w-20" href="register.html"><span class="text">Register</span></a>
+                      <div class="btn-moreinfo bg-dandelion block w-16 cursor-pointer 2xl:w-20">Detail</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-content bg-slate-200 p-3">
+                  <div class="panel-body space-y-2">
+                    <h3>Promo Welcome Bonus</h3>
+                    <div>WELCOME BONUS 50%</div>
+                    <div>
+                      <ol class="list-decimal pl-5">
+                        <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
+                        <li>Minimum Deposit adalah IDR 100.000,-</li>
+                        <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
+                        <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
+                        <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
+                        <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
+                        <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
+                        <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
+                        <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
+                        <li>Syarat dan ketentuan umum RODABET berlaku</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default ptbox bonus">
+                <div class="panel-heading bg-slate-200 p-5">
+                  <div class="promoo space-y-2">
+                    <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
+                    <div class="btns flex items-center justify-end space-x-2 text-center text-white">
+                      <a class="bg-blueViolet block w-16 2xl:w-20" href="register.html"><span class="text">Register</span></a>
+                      <div class="btn-moreinfo bg-dandelion block w-16 cursor-pointer 2xl:w-20">Detail</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-content bg-slate-200 p-3">
+                  <div class="panel-body space-y-2">
+                    <h3>Promo Welcome Bonus</h3>
+                    <div>WELCOME BONUS 50%</div>
+                    <div>
+                      <ol class="list-decimal pl-5">
+                        <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
+                        <li>Minimum Deposit adalah IDR 100.000,-</li>
+                        <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
+                        <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
+                        <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
+                        <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
+                        <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
+                        <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
+                        <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
+                        <li>Syarat dan ketentuan umum RODABET berlaku</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default ptbox slots">
+                <div class="panel-heading bg-slate-200 p-5">
+                  <div class="promoo space-y-2">
+                    <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
+                    <div class="btns flex items-center justify-end space-x-2 text-center text-white">
+                      <a class="bg-blueViolet block w-16 2xl:w-20" href="register.html"><span class="text">Register</span></a>
+                      <div class="btn-moreinfo bg-dandelion block w-16 cursor-pointer 2xl:w-20">Detail</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-content bg-slate-200 p-3">
+                  <div class="panel-body space-y-2">
+                    <h3>Promo Welcome Bonus</h3>
+                    <div>WELCOME BONUS 50%</div>
+                    <div>
+                      <ol class="list-decimal pl-5">
+                        <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
+                        <li>Minimum Deposit adalah IDR 100.000,-</li>
+                        <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
+                        <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
+                        <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
+                        <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
+                        <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
+                        <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
+                        <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
+                        <li>Syarat dan ketentuan umum RODABET berlaku</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- /delete -->
           </div>
         </div>
-      </div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">promotions</div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="wrapper mb-20">
-        <div class="promotionInfo d text-black">
-          <!-- delete:onProd -->
-          <ul class="promotab mb-5 flex items-center space-x-2 text-center uppercase text-white">
-            <li><a href="#" class="ptb active block w-16 bg-blueViolet 2xl:w-20" d="a">all</a></li>
-            <li><a href="#" class="ptb bonus block w-16 bg-blueViolet 2xl:w-20" d="bonus">bonus</a></li>
-            <li><a href="#" class="ptb slots block w-16 bg-blueViolet 2xl:w-20" d="slots">slots</a></li>
-          </ul>
-          <div class="ptballbox grid grid-flow-row grid-cols-1 gap-5 md:grid-cols-2">
-            <div class="panel panel-default ptbox bonus">
-              <div class="panel-heading bg-slate-200 p-5">
-                <div class="promoo space-y-2">
-                  <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
-                  <div class="btns flex items-center justify-end space-x-2 text-center text-white">
-                    <a class="block w-16 bg-blueViolet 2xl:w-20" href="register.html"><span class="text">Register</span></a>
-                    <div class="btn-moreinfo block w-16 cursor-pointer bg-dandelion 2xl:w-20">Detail</div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-content bg-slate-200 p-3">
-                <div class="panel-body space-y-2">
-                  <h3>Promo Welcome Bonus</h3>
-                  <div>WELCOME BONUS 50%</div>
-                  <div>
-                    <ol class="list-decimal pl-5">
-                      <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
-                      <li>Minimum Deposit adalah IDR 100.000,-</li>
-                      <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
-                      <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
-                      <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
-                      <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
-                      <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
-                      <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
-                      <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
-                      <li>Syarat dan ketentuan umum RODABET berlaku</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default ptbox bonus">
-              <div class="panel-heading bg-slate-200 p-5">
-                <div class="promoo space-y-2">
-                  <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
-                  <div class="btns flex items-center justify-end space-x-2 text-center text-white">
-                    <a class="block w-16 bg-blueViolet 2xl:w-20" href="register.html"><span class="text">Register</span></a>
-                    <div class="btn-moreinfo block w-16 cursor-pointer bg-dandelion 2xl:w-20">Detail</div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-content bg-slate-200 p-3">
-                <div class="panel-body space-y-2">
-                  <h3>Promo Welcome Bonus</h3>
-                  <div>WELCOME BONUS 50%</div>
-                  <div>
-                    <ol class="list-decimal pl-5">
-                      <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
-                      <li>Minimum Deposit adalah IDR 100.000,-</li>
-                      <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
-                      <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
-                      <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
-                      <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
-                      <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
-                      <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
-                      <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
-                      <li>Syarat dan ketentuan umum RODABET berlaku</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default ptbox bonus">
-              <div class="panel-heading bg-slate-200 p-5">
-                <div class="promoo space-y-2">
-                  <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
-                  <div class="btns flex items-center justify-end space-x-2 text-center text-white">
-                    <a class="block w-16 bg-blueViolet 2xl:w-20" href="register.html"><span class="text">Register</span></a>
-                    <div class="btn-moreinfo block w-16 cursor-pointer bg-dandelion 2xl:w-20">Detail</div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-content bg-slate-200 p-3">
-                <div class="panel-body space-y-2">
-                  <h3>Promo Welcome Bonus</h3>
-                  <div>WELCOME BONUS 50%</div>
-                  <div>
-                    <ol class="list-decimal pl-5">
-                      <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
-                      <li>Minimum Deposit adalah IDR 100.000,-</li>
-                      <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
-                      <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
-                      <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
-                      <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
-                      <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
-                      <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
-                      <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
-                      <li>Syarat dan ketentuan umum RODABET berlaku</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default ptbox slots">
-              <div class="panel-heading bg-slate-200 p-5">
-                <div class="promoo space-y-2">
-                  <img src="../dist/assets/img/page-banner/promotion.webp" alt="Promo Welcome Bonus" />
-                  <div class="btns flex items-center justify-end space-x-2 text-center text-white">
-                    <a class="block w-16 bg-blueViolet 2xl:w-20" href="register.html"><span class="text">Register</span></a>
-                    <div class="btn-moreinfo block w-16 cursor-pointer bg-dandelion 2xl:w-20">Detail</div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-content bg-slate-200 p-3">
-                <div class="panel-body space-y-2">
-                  <h3>Promo Welcome Bonus</h3>
-                  <div>WELCOME BONUS 50%</div>
-                  <div>
-                    <ol class="list-decimal pl-5">
-                      <li>Promo Welcome Bonus ini berlaku untuk semua new member&nbsp;</li>
-                      <li>Minimum Deposit adalah IDR 100.000,-</li>
-                      <li>Maximum Bonus yang diberikan adalah IDR 1.000.000,-</li>
-                      <li>Setiap member hanya dapat klaim promosi ini satu kali (1X) saja</li>
-                      <li>Syarat untuk withdraw adalah member harus memenuhi Turnover 15x (Deposit + Bonus) dan 1x24 jam setelah deposit&nbsp;</li>
-                      <li>Semua tiket taruhan seri, taruhan di kedua sisi (safety bet), taruhan yang ditolak atau dibatalkan tidak akan dimasukkan ke dalam penghitungan turnover</li>
-                      <li>Maximum Bet tidak boleh melebihi jumlah deposit</li>
-                      <li>Apabila ada kesamaan IP atau menggunakan IP luar negeri dan melanggar ketentuan yang berlaku, semua bonus &amp; kemenangan akan ditarik dan deposit dikembalikan</li>
-                      <li>Member yang mengikuti promo ini tidak mendapatkan bonus lainnya seperti rollingan, referral, cashback</li>
-                      <li>Syarat dan ketentuan umum RODABET berlaku</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /delete -->
-        </div>
-      </div>
-    </section>
-
+      <!-- build:section layout.footer -->
+      <!-- /build -->
+    </div>
     <!-- build:section layout.overlay -->
     <!-- /build -->
 
@@ -177,9 +185,6 @@
     <!-- /build -->
 
     <!-- build:section layout.sidemenu -->
-    <!-- /build -->
-
-    <!-- build:section layout.footer -->
     <!-- /build -->
 
     <!-- build:section layout.script -->
