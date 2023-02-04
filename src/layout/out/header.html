@@ -9,6 +9,7 @@
             <span class="block h-0.5 w-5 bg-slate-900"></span>
           </div>
         </li>
+
         <!-- keep:before_login -->
         <li class="flex items-center justify-center text-black">
           <div class="relative hidden sm:block">
@@ -34,36 +35,36 @@
         <li class="flex items-center justify-center">
           <a href="register.html" class="btn flex h-8 items-center rounded-lg py-1 px-4 sm:h-[70px] sm:text-2xl">daftar</a>
         </li>
-
         <!-- /keep -->
 
         <!-- keep:after_login -->
-        <li class="hidden md:block">
-          <div class="flex items-center justify-center">
-            <div class="flex items-center space-x-2 text-black">
-              <i class="fa-solid fa-copyright"></i>
-              <span class="block leading-3">credit :</span>
-              <span class="g8-bal-total text-dandelion font-semibold">0.00</span>
+        <li class="hidden sm:block">
+          <div class="flex flex-col space-y-1 text-center text-slate-200 text-opacity-50">
+            <div class="flex space-x-2">
+              <div class="flex w-full items-center space-x-2 rounded-full border-[1px] border-conifer bg-blackfores p-1 px-4">
+                <span class="block leading-3 text-christi">credit :</span>
+                <span class="g8-bal-total font-semibold text-lemon">0.00</span>
+              </div>
+              <a href="javascript:void(0)" class="g8-logout btn-slvr px-4 text-black"><i class="fas fa-sign-out-alt"></i></a>
             </div>
-          </div>
-        </li>
-        <li class="balance hidden cursor-pointer md:block">
-          <div class="flex items-center justify-center">
-            <div class="flex items-center space-x-2 bg-slate-300 py-0.5 px-4 font-semibold capitalize text-black">
-              <span>balance :</span>
-              <div class="g8-bal-total text-purple">88888888888</div>
+            <div class="flex items-center space-x-2 rounded-full border-[1px] border-conifer bg-blackfores p-1 px-2">
+              <span class="block leading-3 text-christi">balance :</span>
+              <div class="g8-bal-total text-lemon">88888888888</div>
               <div class="flex cursor-pointer items-center">
                 <i class="fa-solid fa-circle-chevron-down"></i>
               </div>
             </div>
-            <div class="dropdown-balance g8-bal"></div>
           </div>
         </li>
-        <li class="flex items-center justify-center">
-          <a href="admin/profile.html" class="bg-dandelion cursor-pointer py-0.5 px-4 text-white">account</a>
+
+        <li class="hidden sm:block">
+          <a href="admin/profile.html" class="btn flex h-8 items-center rounded-lg py-1 px-4 sm:h-[70px] sm:text-2xl">account</a>
         </li>
-        <li class="flex items-center justify-center">
-          <a href="javascript:void(0)" class="g8-logout bg-blueViolet py-0.5 px-4">logout</a>
+
+        <li class="btn header-chat !h-10 !w-10 cursor-pointer !rounded-full !p-0 sm:hidden">
+          <div class="flex h-full flex-col items-center justify-center">
+            <i class="fa-solid fa-comments"></i>
+          </div>
         </li>
         <!-- /keep -->
       </ul>

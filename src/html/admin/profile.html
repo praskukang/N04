@@ -9,78 +9,88 @@
     <!-- build:section layout.header -->
     <!-- /build -->
 
-    <section class="relative flex flex-col-reverse">
-      <div class="w-full">
-        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
-      </div>
-      <div class="bg-blueViolet">
-        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
-          <i class="fa-solid fa-volume-high"></i>
-          <!-- delete:onProd -->
-          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
-            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
-          </marquee>
-          <!-- /delete -->
-        </div>
-      </div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
-      </div>
-    </section>
-
-    <!-- build:section layout.navAdmin -->
-    <!-- /build -->
-
-    <section class="wrapper">
-      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
-        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>PROFILE</span></div>
-
-        <div class="my-7 flex items-center border-2 border-blueViolet bg-slate-200 p-2 px-5">
-          <div class="w-1/3">
-            <div class="font-bold text-blueViolet">Bank</div>
-            <div class="desc">
-              <span class="bank-get">-</span>
+    <div class="min-h-screen bg-page bg-center pb-24 sm:pb-0">
+      <section class="relative">
+        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+          <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
+            <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
+            <div class="relative hidden md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" class="aspect-[6/1] h-8" />
+              <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
             </div>
-          </div>
-          <div class="w-1/3">
-            <div class="font-bold text-blueViolet">Bank Account No</div>
-            <div class="desc">
-              <span class="bankAcc-get">-</span>
-            </div>
-          </div>
-          <div class="w-1/3">
-            <div class="font-bold text-blueViolet">Credit</div>
-            <div class="desc">
-              <span class="credit-get"></span>
+            <div class="s-a flex w-full items-center">
+              <!-- delete:onProd -->
+              <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+                >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+              </marquee>
+              <!-- /delete -->
             </div>
           </div>
         </div>
+      </section>
 
-        <form id="ajax-form" action="/ajax/account/changePassword" method="post" novalidate="novalidate">
-          <div class="form-container space-y-3">
-            <div class="flex flex-col">
-              <label class="font-bold text-blueViolet"> OLD PASSWORD</label>
-              <input type="password" class="required password h-8 bg-slate-200 px-5 py-1 focus:outline-none" id="oldPwd" name="oldPwd" maxlength="20" minlength="6" placeholder="PLEASE INSERT OLD PASSWORD" />
+      <section>
+        <div class="w-full">
+          <img src="../dist/assets/img/page-title/account.webp" alt="" width="425" height="66" class="w-full" />
+        </div>
+      </section>
+
+      <!-- build:section layout.navAdmin -->
+      <!-- /build -->
+
+      <section class="wrapper">
+        <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
+          <div class="text-blueViolet text-center text-2xl font-bold uppercase"><span>PROFILE</span></div>
+
+          <div class="border-blueViolet my-7 flex items-center border-2 bg-slate-200 p-2 px-5">
+            <div class="w-1/3">
+              <div class="text-blueViolet font-bold">Bank</div>
+              <div class="desc">
+                <span class="bank-get">-</span>
+              </div>
             </div>
-
-            <div class="flex flex-col">
-              <label class="font-bold text-blueViolet"> NEW PASSWORD</label>
-              <input type="password" class="required password h-8 bg-slate-200 px-5 py-1 focus:outline-none" id="newPwd" name="newPwd" maxlength="20" minlength="6" placeholder="PLEASE INSERT 6-12 CHARACTERS" />
+            <div class="w-1/3">
+              <div class="text-blueViolet font-bold">Bank Account No</div>
+              <div class="desc">
+                <span class="bankAcc-get">-</span>
+              </div>
             </div>
-
-            <div class="flex flex-col">
-              <label class="font-bold text-blueViolet"> CONFIRM NEW PASSWORD</label>
-              <input type="password" class="required password h-8 bg-slate-200 px-5 py-1 focus:outline-none" id="confirmPwd" name="confirmPwd" maxlength="20" minlength="6" equalto="#newPwd" placeholder="PLEASE INSERT CONFIRM NEW PASSWORD" />
+            <div class="w-1/3">
+              <div class="text-blueViolet font-bold">Credit</div>
+              <div class="desc">
+                <span class="credit-get"></span>
+              </div>
             </div>
           </div>
 
-          <div class="button-submit-center mx-auto mt-10 w-fit">
-            <button type="submit" class="button btn-process bg-dandelion px-5 py-1">PROCESS</button>
-          </div>
-        </form>
-      </div>
-    </section>
+          <form id="ajax-form" action="/ajax/account/changePassword" method="post" novalidate="novalidate">
+            <div class="form-container space-y-3">
+              <div class="flex flex-col">
+                <label class="text-blueViolet font-bold"> OLD PASSWORD</label>
+                <input type="password" class="required password h-8 bg-slate-200 px-5 py-1 focus:outline-none" id="oldPwd" name="oldPwd" maxlength="20" minlength="6" placeholder="PLEASE INSERT OLD PASSWORD" />
+              </div>
 
+              <div class="flex flex-col">
+                <label class="text-blueViolet font-bold"> NEW PASSWORD</label>
+                <input type="password" class="required password h-8 bg-slate-200 px-5 py-1 focus:outline-none" id="newPwd" name="newPwd" maxlength="20" minlength="6" placeholder="PLEASE INSERT 6-12 CHARACTERS" />
+              </div>
+
+              <div class="flex flex-col">
+                <label class="text-blueViolet font-bold"> CONFIRM NEW PASSWORD</label>
+                <input type="password" class="required password h-8 bg-slate-200 px-5 py-1 focus:outline-none" id="confirmPwd" name="confirmPwd" maxlength="20" minlength="6" equalto="#newPwd" placeholder="PLEASE INSERT CONFIRM NEW PASSWORD" />
+              </div>
+            </div>
+
+            <div class="button-submit-center mx-auto mt-10 w-fit">
+              <button type="submit" class="button btn-process bg-dandelion px-5 py-1">PROCESS</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- build:section layout.footer -->
+      <!-- /build -->
+    </div>
     <!-- build:section layout.overlay -->
     <!-- /build -->
 
@@ -88,9 +98,6 @@
     <!-- /build -->
 
     <!-- build:section layout.sidemenu -->
-    <!-- /build -->
-
-    <!-- build:section layout.footer -->
     <!-- /build -->
 
     <!-- build:section layout.script -->

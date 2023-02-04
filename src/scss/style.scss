@@ -17,6 +17,10 @@
         @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
     }
 
+    .btn-slvr {
+        @apply border-slate-200 bg-gradient-to-b from-slate-300 via-slate-100 to-slate-600 border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1;
+    }
+
     .btn-play {
         @apply text-[3.5vw] sm:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.4vw] 2xl:text-[1.2vw] font-semibold capitalize;
     }
@@ -55,6 +59,12 @@ select {
     }
 }
 
+.navAdmin {
+    li.active {
+        @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
+    }
+}
+
 .mobile-sidemenu.active {
     @apply left-0;
 }
@@ -62,6 +72,7 @@ select {
 .overlaysd.active {
     @apply w-full opacity-100;
 }
+
 .mobile-bottom-menu {
     ul li i {
         background: linear-gradient(to bottom, #d4bb77, #f4eca8, #8a5700);
@@ -125,5 +136,19 @@ select {
 .download-content {
     .dl-bb.active {
         @apply block;
+    }
+}
+
+.promotab {
+    li {
+        .ptb.active {
+            @apply bg-lemon text-black;
+        }
+    }
+}
+
+.info {
+    li.active {
+        @apply bg-christi text-lemon;
     }
 }
