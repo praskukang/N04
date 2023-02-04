@@ -11,52 +11,62 @@
     <!-- build:section layout.header -->
     <!-- /build -->
 
-    <section class="relative flex flex-col-reverse">
-      <div class="w-full">
-        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
-      </div>
-      <div class="bg-blueViolet">
-        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
-          <i class="fa-solid fa-volume-high"></i>
-          <!-- delete:onProd -->
-          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
-            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
-          </marquee>
-          <!-- /delete -->
-        </div>
-      </div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
-      </div>
-    </section>
-
-    <!-- build:section layout.navAdmin -->
-    <!-- /build -->
-
-    <section class="wrapper">
-      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
-        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>message</span></div>
-
-        <div class="mt-5 filter">
-          <div class="flex flex-col">
-            <label class="font-bold text-blueViolet"> SELECT DATE</label>
-            <div class="input-group filter">
-              <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
-                <input type="text" id="searchDateFrom" name="searchDateFrom" class="datepicker h-8 bg-slate-200 px-5 py-1 focus:outline-none" />
-                <span>-</span>
-                <input type="text" id="searchDateTo" name="searchDateTo" class="datepicker h-8 bg-slate-200 px-5 py-1 focus:outline-none" />
-              </div>
-              <button class="btn-process btn-ref-search mt-3 bg-dandelion px-5 py-1">PROCESS</button>
+    <div class="min-h-screen bg-page bg-center pb-24 sm:pb-0">
+      <section class="relative">
+        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+          <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
+            <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
+            <div class="relative hidden md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" class="aspect-[6/1] h-8" />
+              <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
+            </div>
+            <div class="s-a flex w-full items-center">
+              <!-- delete:onProd -->
+              <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+                >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+              </marquee>
+              <!-- /delete -->
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="msg mt-3">
-          <ul class="msglist"></ul>
+      <section>
+        <div class="w-full">
+          <img src="../dist/assets/img/page-title/account.webp" alt="" width="425" height="66" class="w-full" />
         </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- build:section layout.navAdmin -->
+      <!-- /build -->
+
+      <section class="wrapper">
+        <div class="mx-auto mb-20 w-4/5 py-10 text-slate-200 md:w-3/5">
+          <div class="text-center text-2xl font-bold uppercase text-lemon"><span>message</span></div>
+
+          <div class="mt-5 filter">
+            <div class="flex flex-col">
+              <label class="font-bold text-lemon"> SELECT DATE</label>
+              <div class="input-group filter">
+                <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+                  <input type="text" id="searchDateFrom" name="searchDateFrom" class="datepicker h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none" />
+                  <span>-</span>
+                  <input type="text" id="searchDateTo" name="searchDateTo" class="datepicker h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none" />
+                </div>
+                <button class="btn-process btn-ref-search btn mt-3 px-5 py-1 text-black">PROCESS</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="msg mt-3">
+            <ul class="msglist"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- build:section layout.footer -->
+      <!-- /build -->
+    </div>
     <!-- build:section layout.overlay -->
     <!-- /build -->
 
@@ -64,9 +74,6 @@
     <!-- /build -->
 
     <!-- build:section layout.sidemenu -->
-    <!-- /build -->
-
-    <!-- build:section layout.footer -->
     <!-- /build -->
 
     <!-- build:section layout.script -->

@@ -9,72 +9,82 @@
     <!-- build:section layout.header -->
     <!-- /build -->
 
-    <section class="relative flex flex-col-reverse">
-      <div class="w-full">
-        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
-      </div>
-      <div class="bg-blueViolet">
-        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
-          <i class="fa-solid fa-volume-high"></i>
-          <!-- delete:onProd -->
-          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
-            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
-          </marquee>
-          <!-- /delete -->
-        </div>
-      </div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
-      </div>
-    </section>
-
-    <!-- build:section layout.navAdmin -->
-    <!-- /build -->
-
-    <section class="wrapper">
-      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
-        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>bonus code</span></div>
-
-        <form id="ajax-form" action="/ajax/bonus/codeRequest" method="post" class="hidden">
-          <input type="text" id="code" name="code" class="form-control required textfield1" />
-          <button type="submit" class="btn CommonBtt2">Submit</button>
-        </form>
-
-        <div class="mt-7 table">
-          <div class="table-warp">
-            <table class="bonusHis w-full table-fixed border-separate text-center capitalize">
-              <thead>
-                <tr class="bg-slate-400">
-                  <th class="center">no.</th>
-                  <th>date &amp; time</th>
-                  <th>promotion</th>
-                  <th>code</th>
-                  <th class="center">credit</th>
-                  <th class="center">expired</th>
-                  <th class="center">status</th>
-                </tr>
-              </thead>
-
-              <tbody class="bg-slate-600 text-white">
-                <!-- delete:onProd -->
-                <tr>
-                  <td>1</td>
-                  <td>17-Jun-2021 17:46</td>
-                  <td>Deposit</td>
-                  <td>20,000</td>
-                  <td>Success</td>
-                  <td>Success</td>
-                  <td>Success</td>
-                </tr>
-
-                <!-- /delete -->
-              </tbody>
-            </table>
+    <div class="min-h-screen bg-page bg-center pb-24 sm:pb-0">
+      <section class="relative">
+        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+          <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
+            <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
+            <div class="relative hidden md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" class="aspect-[6/1] h-8" />
+              <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
+            </div>
+            <div class="s-a flex w-full items-center">
+              <!-- delete:onProd -->
+              <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+                >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+              </marquee>
+              <!-- /delete -->
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section>
+        <div class="w-full">
+          <img src="../dist/assets/img/page-title/account.webp" alt="" width="425" height="66" class="w-full" />
+        </div>
+      </section>
+
+      <!-- build:section layout.navAdmin -->
+      <!-- /build -->
+
+      <section class="wrapper">
+        <div class="mx-auto mb-20 w-4/5 py-10 text-slate-200 md:w-3/5">
+          <div class="text-center text-2xl font-bold uppercase text-lemon"><span>bonus code</span></div>
+
+          <form id="ajax-form" action="/ajax/bonus/codeRequest" method="post" class="hidden">
+            <input type="text" id="code" name="code" class="required" />
+            <button type="submit" class="btn CommonBtt2">Submit</button>
+          </form>
+
+          <div class="mt-7 table">
+            <div class="table-warp">
+              <table class="bonusHis w-full table-fixed border-separate text-center capitalize">
+                <thead>
+                  <tr class="bg-slate-400">
+                    <th class="center">no.</th>
+                    <th>date &amp; time</th>
+                    <th>promotion</th>
+                    <th>code</th>
+                    <th class="center">credit</th>
+                    <th class="center">expired</th>
+                    <th class="center">status</th>
+                  </tr>
+                </thead>
+
+                <tbody class="bg-slate-600 text-white">
+                  <!-- delete:onProd -->
+                  <tr>
+                    <td>1</td>
+                    <td>17-Jun-2021 17:46</td>
+                    <td>Deposit</td>
+                    <td>20,000</td>
+                    <td>Success</td>
+                    <td>Success</td>
+                    <td>Success</td>
+                  </tr>
+
+                  <!-- /delete -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- build:section layout.footer -->
+      <!-- /build -->
+    </div>
     <!-- build:section layout.overlay -->
     <!-- /build -->
 
@@ -82,9 +92,6 @@
     <!-- /build -->
 
     <!-- build:section layout.sidemenu -->
-    <!-- /build -->
-
-    <!-- build:section layout.footer -->
     <!-- /build -->
 
     <!-- build:section layout.script -->

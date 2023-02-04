@@ -11,134 +11,144 @@
     <!-- build:section layout.header -->
     <!-- /build -->
 
-    <section class="relative flex flex-col-reverse">
-      <div class="w-full">
-        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
-      </div>
-      <div class="bg-blueViolet">
-        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
-          <i class="fa-solid fa-volume-high"></i>
-          <!-- delete:onProd -->
-          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
-            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
-          </marquee>
-          <!-- /delete -->
-        </div>
-      </div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
-      </div>
-    </section>
-
-    <!-- build:section layout.navAdmin -->
-    <!-- /build -->
-
-    <section class="wrapper">
-      <div class="mx-auto mb-20 w-4/5 space-y-3 py-10 text-black md:w-3/5">
-        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>Referral</span></div>
-
-        <div class="referral-info mt-7 w-full space-y-3">
-          <div class="referral-qr flex w-full items-center font-bold uppercase text-blueViolet">
-            <div class="rounded-md bg-slate-200 p-2">
+    <div class="min-h-screen bg-page bg-center pb-24 sm:pb-0">
+      <section class="relative">
+        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+          <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
+            <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
+            <div class="relative hidden md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" class="aspect-[6/1] h-8" />
+              <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
+            </div>
+            <div class="s-a flex w-full items-center">
               <!-- delete:onProd -->
-              <img
-                class="qr"
-                id="qr-ref-d"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABS9JREFUeF7tne2y2jAMROH9H5pOmaETpgk6ttZCCdu/KLK8R5I/wqX3x+PxuPnfZRW4G/Bl2T4nZsDX5mvAF+drwAZ8dQUuPj+vwb8M+H6/t5k+Pc3txbz3LJ1b5tkK8SJdPlYwFaHDRF4xGPA7DQMOstMVXFG+t9stakWu4H0QrmBX8LsCtJIyhU3X0b0xMvsGOrdMfNW6DFcwFaF6Ip9aNI2Fzs2AqaIHdhkBXcHJXTTN8gxjAz7YMO3cS0Q83KI3WkZije7UM0lO9xdRzBLA6rZIK5iOmznL0mepHYVO/RnwwRlanRwUiAH//RYCXGvUkPbEp+ConQEb8DMHaMK4RQ+I5QpOiqUWMLPTpMuAegy36IEWrRY/anejxyS6R1iZ+Kc+Jhlw/JbNgBdedLiCB9b0ivZZMYbX4OQaXNG26QbNFbyggg14wdukDpn6qfVlKi5z4dBBl8ttslzBruD0VWCmI5xyk0WDpnZUQOqP2tFxqR0dl9rNjCtp0TRAajczEeq7cq1WxLT1MaOLAW8UpAJSOwM+UKC7gN3je6v6Tz/hcKaJKKqFzpfaKWIqb9HqoKk/9XlU7Y/OQ20XXa8Or8HqAKk/NRC1PzoPtZ0BD9xt09abuaEy4AMF1BWn9qcGR/25gl3B5/2lO9oqabXuVU1UIbTSvmV36h9hMeA4bQw40MgVHCfRMgtXcCytK/iXK5hWCN2cZPzFuZq3+NZmjJ6/Z2a47CYrI9bMRBTPZGLOrNUGrKAHfBgwEOllkhFrYBipaSZmV/DBjZKUUNLZzwGmetE1hNqpx6X+qF3FPOjGNYpZckyiE6Z2UdCvz9X+vjUuPV3MLAMGTKlu7NSJZcAHENRCU9bqcQ3YgJ8KnLJF06qZmdzoWl1RmRXz2Gr69TXYgKkC/OelDLjZn61SxDMdxhVcvDt2iz5I5wphZirkU/V18Cd5m5QRn7anTnYdwFE9DJgqdaJWjjdZKw/gE7q2ecQV3AbFmkAMeI2ubbxeBjBVNNPK1c/Sd7rd7fa0n9nMLjsH0wANeP+GiuoXFaEBT+yOaYvO2Blw0R+VfauVG7ABR935+bmkRaORFhhVtMDMGOrqn6lqA96opgai9mfAA68BqViu4AWtl7rMiG/AVOUv2hlw/D0tydukCsZ0PcvEoh4j448+G91uGfDEJosmEYWkXi62/gzYgGm+rrXLVAONTD1Gxh991i2a0k0esTJtNvOsHHDkcEDPQ9Nv7Y5p7LS6Mv7os5Hd8BpswPy/fo3Ef32+UlMDphSKN2MTYe0+YsATSrpFT4j2dnZr9F+8ZzZAVIb2LZp+7SYjFq0aapeJJQOOakXnESWHpEXToDOiZiZM46NjGDBVYODsScWndplko9OriMUVPPDzTRkg6oShsRiwAR//4rv6RimT5VGmfmqbdB609Vb4o1pFMZ96kxVN7vV5BRB1AhowpTvw9VrqsiJhDJjSMGCvwQO58jR1BQ8oljkO0AsM2u4qwKnX6sjfqTdZBrzgW5W04mgRU3/UrmJcOkaHjuAK3tDqAER9njdgA37PqWhRp+1Lkal0DVbHXFHpdGMY6S2p4GiQ0c+pgAYcK2vAsUb/WdAEpK5XJqoBUwrFa7VbdPI14ATXf49cuoIzwmSepefgq9hRraIN5HCLpgOr7a4Cjs6D6mfAAy8HaOutsDPgk4JzBR+kLhXmKnYlFUwHsV1fBU79O1l9Ze0TmQH3YbEkEgNeImsfpwbch8WSSAx4iax9nBpwHxZLIjHgJbL2cfoH0NrnEUjWnpEAAAAASUVORK5CYII="
-                height="120"
-                width="120"
-              />
+              <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+                >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+              </marquee>
               <!-- /delete -->
-              <img class="qr" id="qr-ref-d" src="" />
-            </div>
-
-            <div class="ml-5 flex flex-col space-y-2 sm:w-full sm:flex-row sm:items-center sm:justify-around sm:space-y-0">
-              <div class="total">
-                <span class="numb total-ref-dl"> - </span>
-                <span>total downline</span>
-              </div>
-
-              <div class="total">
-                <span class="numb total-ref-inc"> - </span>
-                <span>total incentive</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="referral-link">
-            <div class="flex flex-col">
-              <label class="font-bold uppercase text-blueViolet"> Referral Link</label>
-              <div class="flex-col space-y-2">
-                <!-- <input type="text" class="link refLink h-8 bg-slate-200 px-5 py-1 focus:outline-none" value="" disabled /> -->
-                <div class="refLink h-8 bg-slate-200 px-5 py-1">-</div>
-                <button id="copyBtn" class="btn-process copyBtn bg-dandelion px-5 py-1" data-clipboard-text="">Copy URL <i class="fa-solid fa-copy"></i></button>
-              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="mt-5 filter">
-          <div class="flex flex-col">
-            <label class="font-bold text-blueViolet"> SELECT DATE</label>
-            <div class="input-group filter">
-              <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
-                <input type="text" id="searchDateFrom" name="searchDateFrom" class="datepicker h-8 bg-slate-200 px-5 py-1 focus:outline-none" />
-                <span>-</span>
-                <input type="text" id="searchDateTo" name="searchDateTo" class="datepicker h-8 bg-slate-200 px-5 py-1 focus:outline-none" />
-              </div>
-              <button class="btn-process btn-ref-search mt-3 bg-dandelion px-5 py-1">PROCESS</button>
-            </div>
-          </div>
-        </div>
-
+      <section>
         <div class="w-full">
-          <div class="table-title text-center font-bold text-blueViolet">REFERRAL INFO (<span class="total-ref-dl-info">0</span>)</div>
+          <img src="../dist/assets/img/page-title/account.webp" alt="" width="425" height="66" class="w-full" />
+        </div>
+      </section>
 
-          <div class="table-warp overflow-x-auto whitespace-nowrap">
-            <table class="dd-dl">
-              <thead>
-                <tr class="border-separate bg-slate-400">
-                  <th class="px-5 py-2">NAMA PENGGUNA</th>
-                  <th class="px-5 py-2">TOTAL W/L</th>
-                  <th class="px-5 py-2">HITUNGAN SETORAN</th>
-                  <th class="px-5 py-2">JUMLAH SETORAN</th>
-                  <th class="px-5 py-2">TANGGAL SETORAN TERAKHIR</th>
-                  <th class="px-5 py-2">TANGGAL PENDAFTARAN</th>
-                </tr>
-              </thead>
+      <!-- build:section layout.navAdmin -->
+      <!-- /build -->
 
-              <tbody class="bg-slate-600 text-white">
-                <tr>
-                  <td class="dd no" colspan="6">Search by date range</td>
-                </tr>
-              </tbody>
-            </table>
+      <section class="wrapper">
+        <div class="mx-auto mb-20 w-4/5 space-y-3 py-10 text-slate-200 md:w-3/5">
+          <div class="text-center text-2xl font-bold uppercase text-lemon"><span>Referral</span></div>
+
+          <div class="referral-info mt-7 w-full space-y-3">
+            <div class="referral-qr flex w-full items-center font-bold uppercase text-lemon">
+              <div class="rounded-md bg-black bg-opacity-50 p-2">
+                <!-- delete:onProd -->
+                <img
+                  class="qr"
+                  id="qr-ref-d"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABS9JREFUeF7tne2y2jAMROH9H5pOmaETpgk6ttZCCdu/KLK8R5I/wqX3x+PxuPnfZRW4G/Bl2T4nZsDX5mvAF+drwAZ8dQUuPj+vwb8M+H6/t5k+Pc3txbz3LJ1b5tkK8SJdPlYwFaHDRF4xGPA7DQMOstMVXFG+t9stakWu4H0QrmBX8LsCtJIyhU3X0b0xMvsGOrdMfNW6DFcwFaF6Ip9aNI2Fzs2AqaIHdhkBXcHJXTTN8gxjAz7YMO3cS0Q83KI3WkZije7UM0lO9xdRzBLA6rZIK5iOmznL0mepHYVO/RnwwRlanRwUiAH//RYCXGvUkPbEp+ConQEb8DMHaMK4RQ+I5QpOiqUWMLPTpMuAegy36IEWrRY/anejxyS6R1iZ+Kc+Jhlw/JbNgBdedLiCB9b0ivZZMYbX4OQaXNG26QbNFbyggg14wdukDpn6qfVlKi5z4dBBl8ttslzBruD0VWCmI5xyk0WDpnZUQOqP2tFxqR0dl9rNjCtp0TRAajczEeq7cq1WxLT1MaOLAW8UpAJSOwM+UKC7gN3je6v6Tz/hcKaJKKqFzpfaKWIqb9HqoKk/9XlU7Y/OQ20XXa8Or8HqAKk/NRC1PzoPtZ0BD9xt09abuaEy4AMF1BWn9qcGR/25gl3B5/2lO9oqabXuVU1UIbTSvmV36h9hMeA4bQw40MgVHCfRMgtXcCytK/iXK5hWCN2cZPzFuZq3+NZmjJ6/Z2a47CYrI9bMRBTPZGLOrNUGrKAHfBgwEOllkhFrYBipaSZmV/DBjZKUUNLZzwGmetE1hNqpx6X+qF3FPOjGNYpZckyiE6Z2UdCvz9X+vjUuPV3MLAMGTKlu7NSJZcAHENRCU9bqcQ3YgJ8KnLJF06qZmdzoWl1RmRXz2Gr69TXYgKkC/OelDLjZn61SxDMdxhVcvDt2iz5I5wphZirkU/V18Cd5m5QRn7anTnYdwFE9DJgqdaJWjjdZKw/gE7q2ecQV3AbFmkAMeI2ubbxeBjBVNNPK1c/Sd7rd7fa0n9nMLjsH0wANeP+GiuoXFaEBT+yOaYvO2Blw0R+VfauVG7ABR935+bmkRaORFhhVtMDMGOrqn6lqA96opgai9mfAA68BqViu4AWtl7rMiG/AVOUv2hlw/D0tydukCsZ0PcvEoh4j448+G91uGfDEJosmEYWkXi62/gzYgGm+rrXLVAONTD1Gxh991i2a0k0esTJtNvOsHHDkcEDPQ9Nv7Y5p7LS6Mv7os5Hd8BpswPy/fo3Ef32+UlMDphSKN2MTYe0+YsATSrpFT4j2dnZr9F+8ZzZAVIb2LZp+7SYjFq0aapeJJQOOakXnESWHpEXToDOiZiZM46NjGDBVYODsScWndplko9OriMUVPPDzTRkg6oShsRiwAR//4rv6RimT5VGmfmqbdB609Vb4o1pFMZ96kxVN7vV5BRB1AhowpTvw9VrqsiJhDJjSMGCvwQO58jR1BQ8oljkO0AsM2u4qwKnX6sjfqTdZBrzgW5W04mgRU3/UrmJcOkaHjuAK3tDqAER9njdgA37PqWhRp+1Lkal0DVbHXFHpdGMY6S2p4GiQ0c+pgAYcK2vAsUb/WdAEpK5XJqoBUwrFa7VbdPI14ATXf49cuoIzwmSepefgq9hRraIN5HCLpgOr7a4Cjs6D6mfAAy8HaOutsDPgk4JzBR+kLhXmKnYlFUwHsV1fBU79O1l9Ze0TmQH3YbEkEgNeImsfpwbch8WSSAx4iax9nBpwHxZLIjHgJbL2cfoH0NrnEUjWnpEAAAAASUVORK5CYII="
+                  height="120"
+                  width="120"
+                />
+                <!-- /delete -->
+                <img class="qr" id="qr-ref-d" src="" />
+              </div>
+
+              <div class="ml-5 flex flex-col space-y-2 sm:w-full sm:flex-row sm:items-center sm:justify-around sm:space-y-0">
+                <div class="total">
+                  <span class="numb total-ref-dl"> - </span>
+                  <span>total downline</span>
+                </div>
+
+                <div class="total">
+                  <span class="numb total-ref-inc"> - </span>
+                  <span>total incentive</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="referral-link">
+              <div class="flex flex-col">
+                <label class="font-bold uppercase text-lemon"> Referral Link</label>
+                <div class="flex-col space-y-2">
+                  <!-- <input type="text" class="link refLink h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none" value="" disabled /> -->
+                  <div class="refLink h-8 bg-black bg-opacity-50 px-5 py-1">-</div>
+                  <button id="copyBtn" class="btn-process copyBtn btn px-5 py-1 text-black" data-clipboard-text="">Copy URL <i class="fa-solid fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 filter">
+            <div class="flex flex-col">
+              <label class="font-bold text-lemon"> SELECT DATE</label>
+              <div class="input-group filter">
+                <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+                  <input type="text" id="searchDateFrom" name="searchDateFrom" class="datepicker h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none" />
+                  <span>-</span>
+                  <input type="text" id="searchDateTo" name="searchDateTo" class="datepicker h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none" />
+                </div>
+                <button class="btn-process btn-ref-search btn mt-3 px-5 py-1 text-black">PROCESS</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full">
+            <div class="table-title text-center font-bold text-lemon">REFERRAL INFO (<span class="total-ref-dl-info">0</span>)</div>
+
+            <div class="table-warp overflow-x-auto whitespace-nowrap">
+              <table class="dd-dl">
+                <thead>
+                  <tr class="border-separate bg-slate-400">
+                    <th class="px-5 py-2">NAMA PENGGUNA</th>
+                    <th class="px-5 py-2">TOTAL W/L</th>
+                    <th class="px-5 py-2">HITUNGAN SETORAN</th>
+                    <th class="px-5 py-2">JUMLAH SETORAN</th>
+                    <th class="px-5 py-2">TANGGAL SETORAN TERAKHIR</th>
+                    <th class="px-5 py-2">TANGGAL PENDAFTARAN</th>
+                  </tr>
+                </thead>
+
+                <tbody class="bg-slate-600 text-white">
+                  <tr>
+                    <td class="dd no" colspan="6">Search by date range</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="table">
+            <div class="table-title text-center font-bold text-lemon">REFERRAL INCENTIVE</div>
+
+            <div class="table-warp">
+              <table class="ref-dbox-data w-full table-fixed text-center">
+                <thead>
+                  <tr class="border-separate bg-slate-400 capitalize">
+                    <th>total record (<span class="total-record">0</span>)</th>
+                    <th>total amount (<span class="total-amount">0</span>)</th>
+                  </tr>
+                </thead>
+
+                <tbody class="bg-slate-600 text-white">
+                  <tr>
+                    <td class="dd no" colspan="2">Search by date range</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="table">
-          <div class="table-title text-center font-bold text-blueViolet">REFERRAL INCENTIVE</div>
-
-          <div class="table-warp">
-            <table class="ref-dbox-data w-full table-fixed text-center">
-              <thead>
-                <tr class="border-separate bg-slate-400 capitalize">
-                  <th>total record (<span class="total-record">0</span>)</th>
-                  <th>total amount (<span class="total-amount">0</span>)</th>
-                </tr>
-              </thead>
-
-              <tbody class="bg-slate-600 text-white">
-                <tr>
-                  <td class="dd no" colspan="2">Search by date range</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
+      <!-- build:section layout.footer -->
+      <!-- /build -->
+    </div>
     <!-- build:section layout.overlay -->
     <!-- /build -->
 
@@ -146,9 +156,6 @@
     <!-- /build -->
 
     <!-- build:section layout.sidemenu -->
-    <!-- /build -->
-
-    <!-- build:section layout.footer -->
     <!-- /build -->
 
     <!-- build:section layout.script -->

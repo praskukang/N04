@@ -9,89 +9,99 @@
     <!-- build:section layout.header -->
     <!-- /build -->
 
-    <section class="relative flex flex-col-reverse">
-      <div class="w-full">
-        <img src="../dist/assets/img/page-banner/general.webp" alt="" class="w-full" />
-      </div>
-      <div class="bg-blueViolet">
-        <div class="wrapper marquee s-a flex items-center space-x-2 px-2 py-0.5">
-          <i class="fa-solid fa-volume-high"></i>
-          <!-- delete:onProd -->
-          <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
-            >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
-          </marquee>
-          <!-- /delete -->
-        </div>
-      </div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="text-2xl font-bold uppercase text-dandelion lg:text-3xl xl:text-4xl 2xl:text-5xl">my account</div>
-      </div>
-    </section>
-
-    <!-- build:section layout.navAdmin -->
-    <!-- /build -->
-
-    <section class="wrapper">
-      <div class="mx-auto mb-20 w-4/5 py-10 text-black md:w-3/5">
-        <div class="text-center text-2xl font-bold uppercase text-blueViolet"><span>withdrawal</span></div>
-
-        <div class="my-7 flex items-center border-2 border-blueViolet bg-slate-200 p-2 px-5">
-          <div class="w-1/2">
-            <div class="font-bold text-blueViolet">Minimum Withdraw</div>
-            <div class="desc">
-              <span class="minReq">-</span>
+    <div class="min-h-screen bg-page bg-center pb-24 sm:pb-0">
+      <section class="relative">
+        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+          <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
+            <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
+            <div class="relative hidden md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" class="aspect-[6/1] h-8" />
+              <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
             </div>
-          </div>
-          <div class="w-1/2">
-            <div class="font-bold text-blueViolet">Maximum Withdraw</div>
-            <div class="desc">
-              <span class="maxReq">-</span>
+            <div class="s-a flex w-full items-center">
+              <!-- delete:onProd -->
+              <marquee scrolldelay="150" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
+                >Selamat datang - website judi online terbaik & terlengkap - 1 id untuk bermain semua games - depo mudah & wd cepat - bonus cashback mingguan - daftar sekarang untuk mendapatkan account
+              </marquee>
+              <!-- /delete -->
             </div>
           </div>
         </div>
+      </section>
 
-        <form id="confirm-form" action="/ajax/cm/reqWithdraw" method="post" novalidate="novalidate">
-          <div class="form-container space-y-3">
-            <div class="dropdown flex flex-col">
-              <label class="font-bold text-blueViolet"> FROM</label>
-              <select id="gameIdWd" name="gameIdWd" class="gameIdWd wdgame h-8 bg-slate-200 px-5 py-1 focus:outline-none">
-                <option value="">Select Wallet</option>
-              </select>
-            </div>
+      <section>
+        <div class="w-full">
+          <img src="../dist/assets/img/page-title/account.webp" alt="" width="425" height="66" class="w-full" />
+        </div>
+      </section>
 
-            <div class="w-amo-av hide flex flex-col">
-              <label class="font-bold text-blueViolet"> AVAILABLE CREDIT TO WITHDRAW</label>
-              <p class="w-amo-av-dd">-</p>
-            </div>
+      <!-- build:section layout.navAdmin -->
+      <!-- /build -->
 
-            <div class="w-amo hide flex flex-col">
-              <label class="font-bold text-blueViolet"> TOTAL (CR)</label>
-              <input type="text" id="amountWd" name="amountWd" class="amo required h-8 bg-slate-200 px-5 py-1 focus:outline-none" placeholder="" />
-            </div>
-          </div>
+      <section class="wrapper">
+        <div class="mx-auto mb-20 w-4/5 py-10 text-slate-200 md:w-3/5">
+          <div class="text-center text-2xl font-bold uppercase text-lemon"><span>withdrawal</span></div>
 
-          <div class="my-7 flex items-center border-2 border-blueViolet bg-slate-200 p-2 px-5">
+          <div class="my-7 flex items-center border-2 border-christi bg-black bg-opacity-50 p-2 px-5">
             <div class="w-1/2">
-              <div class="font-bold text-blueViolet">Bank Account No</div>
+              <div class="font-bold text-lemon">Minimum Withdraw</div>
               <div class="desc">
-                <span class="bankAccNo">-</span>
+                <span class="minReq">-</span>
               </div>
             </div>
             <div class="w-1/2">
-              <div class="font-bold text-blueViolet">Bank Account Name</div>
+              <div class="font-bold text-lemon">Maximum Withdraw</div>
               <div class="desc">
-                <span class="bankAccName">-</span>
+                <span class="maxReq">-</span>
               </div>
             </div>
           </div>
 
-          <div class="button-submit-center mx-auto mt-10 w-fit">
-            <button type="submit" class="button btn-process bg-dandelion px-5 py-1">PROCESS</button>
-          </div>
-        </form>
-      </div>
-    </section>
+          <form id="confirm-form" action="/ajax/cm/reqWithdraw" method="post" novalidate="novalidate">
+            <div class="form-container space-y-3">
+              <div class="dropdown flex flex-col">
+                <label class="font-bold text-lemon"> FROM</label>
+                <select id="gameIdWd" name="gameIdWd" class="gameIdWd wdgame h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none">
+                  <option value="">Select Wallet</option>
+                </select>
+              </div>
 
+              <div class="w-amo-av hide flex flex-col">
+                <label class="font-bold text-lemon"> AVAILABLE CREDIT TO WITHDRAW</label>
+                <p class="w-amo-av-dd">-</p>
+              </div>
+
+              <div class="w-amo hide flex flex-col">
+                <label class="font-bold text-lemon"> TOTAL (CR)</label>
+                <input type="text" id="amountWd" name="amountWd" class="amo required h-8 bg-black bg-opacity-50 px-5 py-1 focus:outline-none" placeholder="" />
+              </div>
+            </div>
+
+            <div class="my-7 flex items-center border-2 border-lemon bg-black bg-opacity-50 p-2 px-5">
+              <div class="w-1/2">
+                <div class="font-bold text-lemon">Bank Account No</div>
+                <div class="desc">
+                  <span class="bankAccNo">-</span>
+                </div>
+              </div>
+              <div class="w-1/2">
+                <div class="font-bold text-lemon">Bank Account Name</div>
+                <div class="desc">
+                  <span class="bankAccName">-</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="button-submit-center mx-auto mt-10 w-fit">
+              <button type="submit" class="btn btn-process bg-dandelion px-5 py-1 text-black">PROCESS</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- build:section layout.footer -->
+      <!-- /build -->
+    </div>
     <!-- build:section layout.overlay -->
     <!-- /build -->
 
@@ -99,9 +109,6 @@
     <!-- /build -->
 
     <!-- build:section layout.sidemenu -->
-    <!-- /build -->
-
-    <!-- build:section layout.footer -->
     <!-- /build -->
 
     <!-- build:section layout.script -->
