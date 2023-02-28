@@ -8,19 +8,19 @@
 }
 @layer utilities {
   .wrapper {
-    @apply px-5 sm:px-14 xl:max-w-6xl 2xl:max-w-7xl mx-auto;
+    @apply mx-auto px-5 sm:px-14 xl:max-w-6xl 2xl:max-w-7xl;
   }
   .btn {
-    @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
+    @apply h-8 rounded-lg border-[1px] border-straw bg-gradient-to-b from-straw via-primrose to-alpine py-1 px-7 font-bold uppercase tracking-wide shadow-lg;
   }
   .btn-slvr {
-    @apply border-slate-200 bg-gradient-to-b from-slate-300 via-slate-100 to-slate-600 border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1;
+    @apply h-8 rounded-lg border-[1px] border-slate-200 bg-gradient-to-b from-slate-300 via-slate-100 to-slate-600 py-1 font-bold tracking-wide shadow-lg;
   }
   .btn-play {
-    @apply text-[3.5vw] sm:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.4vw] 2xl:text-[1.2vw] font-semibold capitalize;
+    @apply text-[3.5vw] font-semibold capitalize sm:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.4vw] 2xl:text-[1.2vw];
   }
   .btn-play2 {
-    @apply text-[3.5vw] sm:text-[2.3vw] lg:text-[2.2vw] xl:text-[2vw] 2xl:text-[1.5vw] font-semibold capitalize;
+    @apply text-[3.5vw] font-semibold capitalize sm:text-[2.3vw] lg:text-[2.2vw] xl:text-[2vw] 2xl:text-[1.5vw];
   }
 }
 html {
@@ -28,11 +28,11 @@ html {
 }
 
 body {
-  @apply text-black bg-white relative mx-auto font-genos max-w-[120rem];
+  @apply relative mx-auto max-w-[120rem] bg-white font-genos text-black;
 }
 
 .inp {
-  @apply bg-blackfores py-1 focus:outline-none h-6;
+  @apply h-6 bg-blackfores py-1 focus:outline-none;
 }
 
 input {
@@ -43,15 +43,19 @@ select {
   @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
 }
 
+.g8-banner img {
+  @apply w-full;
+}
+
 .desktop-menu li.active {
   @apply bg-christi text-lemon;
 }
 .desktop-menu li:hover {
-  @apply bg-christi text-lemon ease-in-out duration-200;
+  @apply bg-christi text-lemon duration-200 ease-in-out;
 }
 
 .navAdmin li.active {
-  @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
+  @apply h-8 rounded-lg border-[1px] border-straw bg-gradient-to-b from-straw via-primrose to-alpine py-1 px-7 font-bold uppercase tracking-wide shadow-lg;
 }
 
 .mobile-sidemenu.active {
@@ -63,7 +67,6 @@ select {
 }
 
 .mobile-bottom-menu ul li i {
-  background: -webkit-gradient(linear, left top, left bottom, from(#d4bb77), color-stop(#f4eca8), to(#8a5700));
   background: linear-gradient(to bottom, #d4bb77, #f4eca8, #8a5700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,36 +82,36 @@ select {
   padding-top: 0px;
 }
 .mobile-bottom-menu li.active {
-  @apply bg-blackfores text-lemon bg-opacity-50;
+  @apply bg-blackfores bg-opacity-50 text-lemon;
 }
 
 .overlaysd.active {
-  @apply opacity-100 w-full;
+  @apply w-full opacity-100;
 }
 
 .overlay.active {
-  @apply opacity-100 visible;
+  @apply visible opacity-100;
 }
 
 .popup-login.active {
   @apply block;
 }
 .popup-login.active .popLog {
-  @apply opacity-100 visible;
+  @apply visible opacity-100;
 }
 
 .popup-fp.active {
   @apply block;
 }
 .popup-fp.active .popfp {
-  @apply opacity-100 visible;
+  @apply visible opacity-100;
 }
 
 .popup-ireg.active {
   @apply block;
 }
 .popup-ireg.active .popireg {
-  @apply opacity-100 visible;
+  @apply visible opacity-100;
 }
 
 .download-menu ul li.active {

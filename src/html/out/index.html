@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <!-- build:section layout.head -->
+    <!-- build:section layout.meta -->
+    <!-- /build -->
+
+    <!-- prettier-ignore -->
+    <style type="text/css">
+      .indexcss{color:white}
+    </style>
+
+    <!-- build:section layout.style -->
     <!-- /build -->
   </head>
 
@@ -12,16 +20,18 @@
     <div class="min-h-screen bg-home bg-center pb-24 sm:pb-0">
       <section class="relative">
         <!-- delete:onProd -->
-        <img src="../dist/assets/img/part/promo.webp" alt="" width="425" height="198" class="h-full w-full sm:hidden" />
-        <img src="../dist/assets/img/part/banner.webp" alt="" class="hidden w-full sm:block" />
+        <div class="aspect-[3/1]">
+          <img src="../dist/assets/img/part/promo.webp" alt="" width="425" height="198" class="h-full w-full sm:hidden" />
+          <img src="../dist/assets/img/part/banner.webp" alt="" class="hidden w-full sm:block" />
+        </div>
         <!-- /delete -->
         <div class="g8-banner g8-banner-m aspect relative sm:hidden"></div>
         <div class="g8-banner g8-banner-d aspect relative hidden sm:block"></div>
-        <div class="lg:wrapper sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
+        <div class="lg:wrapper z-10 sm:absolute sm:top-0 sm:left-1/2 sm:w-full sm:-translate-x-1/2">
           <div class="flex items-center rounded-bl-xl border-b-[2px] border-straw bg-black text-lemon md:rounded-br-xl md:border-r-[2px]">
             <img src="../dist/assets/img/mobile/ann.webp" alt="" width="54" height="24" class="h-6 md:hidden" />
-            <div class="relative hidden md:block">
-              <img src="../dist/assets/img/part/ann.webp" alt="" height="32" class="h-8" />
+            <div class="relative hidden h-8 w-48 md:block">
+              <img src="../dist/assets/img/part/ann.webp" alt="" width="164" height="32" class="h-full w-full" />
               <div class="absolute right-5 top-1/2 -translate-y-1/2 font-bold capitalize text-black">announcement</div>
             </div>
             <div class="s-a flex w-full items-center">
@@ -40,7 +50,7 @@
           <img src="../dist/assets/img/mobile/jackpot.webp" alt="" width="417" height="89" class="h-full w-full" />
         </div>
         <div class="hidden md:block">
-          <img src="../dist/assets/img/home/jackpot.webp" alt="" class="h-full w-full" />
+          <img src="../dist/assets/img/home/jackpot.webp" alt="" width="1168" height="236" class="h-full w-full" />
         </div>
         <div class="absolute top-1/2 right-[15%] -translate-y-full text-[6.5vw] leading-3 text-lemon md:right-[17%] md:text-[6vw] xl:text-[5vw] 2xl:text-[4vw]">
           <span class="jackpot-currency">IDR</span>
@@ -51,7 +61,7 @@
       <section class="relative">
         <div class="md:wrapper sm:py-5">
           <div class="hidden md:block">
-            <img src="../dist/assets/img/part/bar-products.webp" alt="" />
+            <img src="../dist/assets/img/part/bar-products.webp" alt="" width="1168" height="71" />
           </div>
           <div class="relative px-5 md:z-10">
             <ul class="grid grid-flow-row grid-cols-3 gap-2 font-bold capitalize sm:grid-cols-4 sm:text-lg md:flex md:flex-wrap md:items-center md:justify-center">
@@ -121,13 +131,13 @@
           </div>
         </div>
         <div class="absolute z-0 hidden md:-bottom-[10%] md:block xl:-bottom-[15%]">
-          <img src="../dist/assets/img/home/stage.webp" alt="" />
+          <img src="../dist/assets/img/home/stage.webp" alt="" width="1652" height="184" />
         </div>
       </section>
 
       <section class="md:wrapper relative mt-16 hidden md:block 2xl:mt-24">
         <div class="hidden md:block">
-          <img src="../dist/assets/img/part/bar-download.webp" alt="" />
+          <img src="../dist/assets/img/part/bar-download.webp" alt="" width="1168" height="71" />
         </div>
         <div class="absolute top-[18%] right-1/4 lg:top-1/4 lg:right-[15%]">
           <div class="flex flex-col items-center justify-center space-y-1 uppercase leading-3">
@@ -141,7 +151,7 @@
             <img src="../dist/assets/img/home/dl-mobile.webp" alt="" width="680" height="430" />
           </div>
           <div class="flex w-1/5 flex-col items-center justify-center space-y-2 px-2 leading-3 xl:px-0">
-            <img src="https://www.g8apps.online/img/qr-lv2-a.png" width="142" height="142" />
+            <img src="https://www.g8apps.online/img/qr-lv2-a.png" width="142" height="142" alt="" />
             <div class="text-primrose">Pindai Kode QR</div>
             <a href="mobile.html" class="text-lemon">Unduh APK</a>
           </div>

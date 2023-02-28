@@ -3,152 +3,158 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Genos";
-    src: url("./fonts/font-style/Genos-VariableFont_wght.ttf");
-    font-display: swap;
+  font-family: 'Genos';
+  src: url('./fonts/font-style/Genos-VariableFont_wght.ttf');
+  font-display: swap;
 }
 
 @layer utilities {
-    .wrapper {
-        @apply px-5 sm:px-14 xl:max-w-6xl 2xl:max-w-7xl mx-auto;
-    }
+  .wrapper {
+    @apply mx-auto px-5 sm:px-14 xl:max-w-6xl 2xl:max-w-7xl;
+  }
 
-    .btn {
-        @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
-    }
+  .btn {
+    @apply h-8 rounded-lg border-[1px] border-straw bg-gradient-to-b from-straw via-primrose to-alpine py-1 px-7 font-bold uppercase tracking-wide shadow-lg;
+  }
 
-    .btn-slvr {
-        @apply border-slate-200 bg-gradient-to-b from-slate-300 via-slate-100 to-slate-600 border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1;
-    }
+  .btn-slvr {
+    @apply h-8 rounded-lg border-[1px] border-slate-200 bg-gradient-to-b from-slate-300 via-slate-100 to-slate-600 py-1 font-bold tracking-wide shadow-lg;
+  }
 
-    .btn-play {
-        @apply text-[3.5vw] sm:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.4vw] 2xl:text-[1.2vw] font-semibold capitalize;
-    }
+  .btn-play {
+    @apply text-[3.5vw] font-semibold capitalize sm:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.4vw] 2xl:text-[1.2vw];
+  }
 
-    .btn-play2 {
-        @apply text-[3.5vw] sm:text-[2.3vw] lg:text-[2.2vw] xl:text-[2vw] 2xl:text-[1.5vw] font-semibold capitalize;
-    }
+  .btn-play2 {
+    @apply text-[3.5vw] font-semibold capitalize sm:text-[2.3vw] lg:text-[2.2vw] xl:text-[2vw] 2xl:text-[1.5vw];
+  }
 }
 
 html {
-    -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-    @apply text-black bg-white relative mx-auto font-genos max-w-[120rem];
+  @apply relative mx-auto max-w-[120rem] bg-white font-genos text-black;
 }
 
 .inp {
-    @apply bg-blackfores py-1 focus:outline-none h-6;
+  @apply h-6 bg-blackfores py-1 focus:outline-none;
 }
 
 input {
-    @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
+  @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
 }
 
 select {
-    @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
+  @apply h-8 w-full bg-black bg-opacity-50 px-2 py-2 focus:outline-none;
+}
+
+.g8-banner {
+  img {
+    @apply w-full;
+  }
 }
 
 .desktop-menu {
-    li.active {
-        @apply bg-christi text-lemon;
-    }
-    li:hover {
-        @apply bg-christi text-lemon ease-in-out duration-200;
-    }
+  li.active {
+    @apply bg-christi text-lemon;
+  }
+  li:hover {
+    @apply bg-christi text-lemon duration-200 ease-in-out;
+  }
 }
 
 .navAdmin {
-    li.active {
-        @apply border-straw bg-gradient-to-b from-straw via-primrose to-alpine border-[1px] font-bold tracking-wide shadow-lg h-8 rounded-lg py-1 px-7 uppercase;
-    }
+  li.active {
+    @apply h-8 rounded-lg border-[1px] border-straw bg-gradient-to-b from-straw via-primrose to-alpine py-1 px-7 font-bold uppercase tracking-wide shadow-lg;
+  }
 }
 
 .mobile-sidemenu.active {
-    @apply left-0;
+  @apply left-0;
 }
 
 .overlaysd.active {
-    @apply w-full opacity-100;
+  @apply w-full opacity-100;
 }
 
 .mobile-bottom-menu {
-    ul li i {
-        background: linear-gradient(to bottom, #d4bb77, #f4eca8, #8a5700);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 30px;
-        padding-top: 10px;
-        -webkit-text-stroke-width: 0.5px;
-        -webkit-text-stroke-color: #cec06f;
-    }
+  ul li i {
+    background: linear-gradient(to bottom, #d4bb77, #f4eca8, #8a5700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    padding-top: 10px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #cec06f;
+  }
 
-    ul li .fa-circle-user {
-        color: #2b2828;
-        background: unset;
-        -webkit-text-fill-color: unset;
-        padding-top: 0px;
-    }
+  ul li .fa-circle-user {
+    color: #2b2828;
+    background: unset;
+    -webkit-text-fill-color: unset;
+    padding-top: 0px;
+  }
 
-    li.active {
-        @apply bg-blackfores text-lemon bg-opacity-50;
-    }
+  li.active {
+    @apply bg-blackfores bg-opacity-50 text-lemon;
+  }
 }
 
 .overlaysd.active {
-    @apply opacity-100 w-full;
+  @apply w-full opacity-100;
 }
 
 .overlay.active {
-    @apply opacity-100 visible;
+  @apply visible opacity-100;
 }
 
 .popup-login.active {
-    @apply block;
-    .popLog {
-        @apply opacity-100 visible;
-    }
+  @apply block;
+  .popLog {
+    @apply visible opacity-100;
+  }
 }
 
 .popup-fp.active {
-    @apply block;
-    .popfp {
-        @apply opacity-100 visible;
-    }
+  @apply block;
+  .popfp {
+    @apply visible opacity-100;
+  }
 }
 
 .popup-ireg.active {
-    @apply block;
-    .popireg {
-        @apply opacity-100 visible;
-    }
+  @apply block;
+  .popireg {
+    @apply visible opacity-100;
+  }
 }
 
 .download-menu {
-    ul {
-        li.active {
-            @apply bg-christi text-lemon;
-        }
+  ul {
+    li.active {
+      @apply bg-christi text-lemon;
     }
+  }
 }
 
 .download-content {
-    .dl-bb.active {
-        @apply block;
-    }
+  .dl-bb.active {
+    @apply block;
+  }
 }
 
 .promotab {
-    li {
-        .ptb.active {
-            @apply bg-lemon text-black;
-        }
+  li {
+    .ptb.active {
+      @apply bg-lemon text-black;
     }
+  }
 }
 
 .info {
-    li.active {
-        @apply bg-christi text-lemon;
-    }
+  li.active {
+    @apply bg-christi text-lemon;
+  }
 }
