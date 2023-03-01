@@ -1,6 +1,7 @@
 <script type="text/javascript" src="../dist/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../dist/assets/js/lazysizes.min.js"></script>
 <script type="text/javascript" src="../dist/assets/js/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="../dist/assets/js/helper.js"></script>
+<!-- <script type="text/javascript" src="../dist/assets/js/helper.js"></script> -->
 
 <script src="/plugins/alerts/jquery.alerts.js"></script>
 <script src="/plugins/validate/jquery.validate-min.js"></script>
@@ -8,56 +9,52 @@
 
 <!-- keep:before_login -->
 <script type="text/javascript">
-  document.write(
-    '\
-	<script src="/func/jsx/global.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-	<script src="/func/jsx/cms.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-	<script src="../dist/assets/js/common.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-	<script src="../dist/assets/js/template.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-  ',
-  );
+  let loadScript = (e) =>
+    new Promise((resolve, reject) => {
+      var s = document.createElement('script');
+      s.src = e + '?' + Math.random();
+      s.defer = true;
+      s.onload = function () {
+        resolve(true);
+      };
+      document.body.appendChild(s);
+    });
+  loadScript('/func/jsx/global.js').then(() => {
+    loadScript('/func/jsx/cms.js').then(() => {
+      ['../dist/assets/js/common.js', '../dist/assets/js/template.js'].forEach((e) => {
+        var s = document.createElement('script');
+        s.src = e + '?' + Math.random();
+        s.defer = true;
+        document.body.appendChild(s);
+      });
+    });
+  });
 </script>
 <!-- /keep -->
 
 <!-- keep:after_login -->
 <script src="/js/ws.js"></script>
 <script type="text/javascript">
-  document.write(
-    '\
-	<script src="/func/jsx/global.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-	<script src="/func/jsx/cms.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-	<script src="../dist/assets/js/common.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-    <script src="../dist/assets/js/template-secure.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-	<script src="/js/wovs.js?' +
-      Math.random() +
-      '"><' +
-      '/script>\
-  ',
-  );
+  let loadScriptAfter = (e) =>
+    new Promise((resolve, reject) => {
+      var s = document.createElement('script');
+      s.src = e + '?' + Math.random();
+      s.defer = true;
+      s.onload = function () {
+        resolve(true);
+      };
+      document.body.appendChild(s);
+    });
+  loadScriptAfter('/func/jsx/global.js').then(() => {
+    loadScriptAfter('/func/jsx/cms.js').then(() => {
+      ['../dist/assets/js/common.js', '../dist/assets/js/template-secure.js', '/js/wovs.js?'].forEach((e) => {
+        var s = document.createElement('script');
+        s.src = e + '?' + Math.random();
+        s.defer = true;
+        document.body.appendChild(s);
+      });
+    });
+  });
 </script>
 <!-- /keep -->
 

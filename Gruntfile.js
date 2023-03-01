@@ -45,7 +45,8 @@ module.exports = function (grunt) {
 					beautify: false,
 					sections: {
 						layout: {
-							head: 'src/layout/out/head.html',
+							meta: 'src/layout/out/head-meta.html',
+							style: 'src/layout/out/head-style.html',
 							header: 'src/layout/out/header.html',
 							footer: 'src/layout/out/footer.html',
 							sidemenu: 'src/layout/out/sidemenu.html',
@@ -160,9 +161,54 @@ module.exports = function (grunt) {
 							match: /.togelcss{color:white}/gm,
 							replacement: '<%= grunt.file.read("generated/togelcss.css") %>'
 						},
+
 					]
 				},
 				files: [{ expand: true, flatten: true, src: ['local/*.html'], dest: 'local/' }]
+			},
+
+			adminCSS: {
+				options: {
+					patterns: [
+						{
+							match: /.bonuscss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/bonuscss.css") %>'
+						},
+						{
+							match: /.depositcss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/depositcss.css") %>'
+						},
+						{
+							match: /.historycss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/historycss.css") %>'
+						},
+						{
+							match: /.messagescss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/messagescss.css") %>'
+						},
+						{
+							match: /.profilecss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/profilecss.css") %>'
+						},
+						{
+							match: /.referralcss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/referralcss.css") %>'
+						},
+						{
+							match: /.transfercss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/transfercss.css") %>'
+						},
+						{
+							match: /.walletcss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/walletcss.css") %>'
+						},
+						{
+							match: /.withdrawalcss{color:white}/gm,
+							replacement: '<%= grunt.file.read("generated/withdrawalcss.css") %>'
+						},
+					]
+				},
+				files: [{ expand: true, flatten: true, src: ['local/secure/admin/*.html'], dest: 'local/secure/admin/' }]
 			},
 
 			localSecure: {
@@ -646,6 +692,114 @@ module.exports = function (grunt) {
 				},
 				src: 'dist/togel.html',
 				dest: 'generated/togelcss.css'
+			},
+			22: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/bonus.html',
+				dest: 'generated/bonuscss.css'
+			},
+			23: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/deposit.html',
+				dest: 'generated/depositcss.css'
+			},
+			24: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/history.html',
+				dest: 'generated/historycss.css'
+			},
+			25: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/messages.html',
+				dest: 'generated/messagescss.css'
+			},
+			26: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/profile.html',
+				dest: 'generated/profilecss.css'
+			},
+			27: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/referral.html',
+				dest: 'generated/referralcss.css'
+			},
+			28: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/transfer.html',
+				dest: 'generated/transfercss.css'
+			},
+			29: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/wallet.html',
+				dest: 'generated/walletcss.css'
+			},
+			30: {
+				options: {
+					base: './',
+					css: [
+						'dist/assets/css/fonts/css/all.min.css',
+						'dist/assets/css/swiper-bundle.min.css',
+						'dist/assets/css/style.css',
+					],
+				},
+				src: 'dist/secure/admin/withdrawal.html',
+				dest: 'generated/withdrawalcss.css'
 			},
 		},
 

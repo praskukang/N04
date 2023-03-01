@@ -1,0 +1,457 @@
+.g8sggl {
+  background: #cbd5e1;
+}
+.g8sggl .glbox .gl .glimg,
+.g8sggl .glbox .gl .glp {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.g8sggl * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.g8sggl .g8sggl-t {
+  font-family: Tahoma;
+  background-color: #62ab22;
+  font-size: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+.g8sggl .g8sggl-t .ii {
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-position: top 0 center;
+  background-size: 72%;
+  position: relative;
+  vertical-align: top;
+}
+.g8sggl .g8sggl-t .ii .ii-tt {
+  padding: 40px 0 5px;
+}
+.g8sggl .g8sggl-t .ii .ii-info {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+.g8sggl .g8sggl-t .ii .ii-info .fa {
+  font-size: 10px;
+  line-height: 16px;
+}
+.g8sggl .g8sggl-t .ii.aaa,
+.g8sggl .g8sggl-t .ii:hover {
+  background-blend-mode: inherit;
+}
+.g8sggl .g8sggl-c {
+  background-color: #1c360c;
+  font-size: 0;
+  margin-bottom: 15px;
+  color: #62ab22;
+}
+.g8sggl .g8sggl-c .ll {
+  font-family: Tahoma;
+  display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow-x: auto;
+  position: relative;
+}
+.g8sggl .g8sggl-c .ll .ii {
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+.g8sggl .g8sggl-c .rr {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+.g8sggl .g8sggl-c .ll .ii.aaa,
+.g8sggl .g8sggl-c .ll .ii:hover {
+  background-color: #62ab22;
+  color: #f7ff20;
+}
+.g8sggl .g8sggl-b {
+  font-family: Tahoma;
+  padding: 10px;
+}
+.g8sggl .glmsg {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+.g8sggl .glmsg .g8sgpopa {
+  background-color: #d9b300;
+  color: #352c02;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 15px;
+}
+.g8sggl .glmsg .g8sgpopa:hover {
+  background-color: #333;
+  color: #fff;
+}
+.g8sggl .glbox {
+  font-size: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  z-index: 0;
+}
+.g8sggl .glbox .gl {
+  display: inline-block;
+  width: calc(100% - 10px);
+  font-size: 14px;
+  overflow: hidden;
+}
+.g8sggl .glbox .gl.hh {
+  display: none;
+}
+.g8sggl .glbox .gl.ss-yes {
+  display: inline-block !important;
+}
+.g8sggl .glbox .gl.ss-no {
+  display: none !important;
+}
+.g8sggl .glbox .gl .glimg {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-size: 100%;
+  background-color: #050505;
+  cursor: pointer;
+  overflow: hidden;
+}
+.g8sggl .glbox .gl .gltext {
+  background-color: #62ab22;
+  color: #fff;
+  padding: 6px 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.g8sggl .glbox .gl .glp {
+  background-color: #62ab22;
+  text-align: center;
+  background-size: auto 86%;
+  min-height: 26px;
+}
+.g8sggl .glbox .gl .glimg:hover .hwrap {
+  opacity: 1;
+}
+.g8sggl .glbox .gl .glbadge {
+  width: 35%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  z-index: 2;
+}
+.g8sggl .glbox .gl .glbadge img {
+  max-width: 100%;
+  height: auto;
+}
+.g8sggl .glbox .gl .glpic {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.g8sggl .glbox .gl .glpic img {
+  width: 100%;
+}
+.g8sggl .glbox .gl .hwrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+.g8sggl .g8sggl-tarr,
+.g8sggl .glpagi .pagi.aaa,
+.g8sggl .glpagi .pagi:hover {
+  color: #352c02;
+  background-color: #62ab22;
+}
+.g8sggl .glbox .gl .hwrap .hbox {
+  position: absolute;
+  width: 65%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.g8sggl .glbox .gl .hwrap .hbox .main {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px;
+  border-radius: 20px;
+}
+.g8sggl .glpagi {
+  text-align: center;
+  font-size: 0;
+  margin-top: 15px;
+  display: none;
+}
+.g8sggl .glpagi .pagi {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  margin: 2px;
+  background-color: #000;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.g8sggl .searchbar {
+  font-size: 12px;
+}
+.g8sggl .searchbar.d-flex {
+  display: flex;
+}
+.g8sggl .searchbar input {
+  font-family: Tahoma;
+  background-color: #1c360c;
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 10px;
+  outline: 0;
+  border-radius: 0;
+  color: #f5f5f5;
+}
+.g8sggl .searchbar input::placeholder {
+  color: #f5f5f5;
+  font-weight: 700;
+  font-style: italic;
+}
+.g8sggl .searchbar button {
+  background-color: #1c360c;
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+.g8sggl .g8sggl-tarr {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 0 8px;
+  width: 22px;
+  font-size: 16px;
+  display: none;
+}
+.g8sggl .g8sggl-tarr.l {
+  left: 0;
+}
+.g8sggl .g8sggl-tarr.r {
+  right: 0;
+}
+.g8sggl .g8sggl-tarr i {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.g8sggl .g8sggl-c .ll .ii,
+.g8sggl .g8sggl-t .ii,
+.g8sggl .glpagi .pagi {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.g8sggl .g8sggl-c .ll .ww::-webkit-scrollbar,
+.g8sggl .g8sggl-t .ww::-webkit-scrollbar {
+  display: none;
+}
+.g8sggl .g8sggl-c .ll .ww,
+.g8sggl .g8sggl-t .ww {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  white-space: nowrap;
+  overflow-x: auto;
+  text-align: left;
+}
+.pvd.all {
+  background-image: url(/common/images/slots/all.png);
+}
+.pvd.lv2 {
+  background-image: url(/common/images/slots/live22.png);
+}
+.pvd.pm {
+  background-image: url(/common/images/slots/pm.png);
+}
+.pvd.vp {
+  background-image: url(/common/images/slots/vp.png);
+}
+.pvd.s88 {
+  background-image: url(/common/images/slots/s88.png);
+}
+.pvd.jk {
+  background-image: url(/common/images/slots/jk.png);
+}
+.pvd.pg {
+  background-image: url(/common/images/slots/pg.png);
+}
+.pvd.hb {
+  background-image: url(/common/images/slots/hb.png);
+}
+.pvd.sg {
+  background-image: url(/common/images/slots/sg.png);
+}
+.pvd.cq9 {
+  background-image: url(/common/images/slots/cq9.png);
+}
+.pvd.ka {
+  background-image: url(/common/images/slots/ka.png);
+}
+.pvd.gss {
+  background-image: url(/common/images/slots/gss.png);
+}
+.pvd.gp {
+  background-image: url(/common/images/slots/gp.png);
+}
+.pvd.pt {
+  background-image: url(/common/images/slots/pt.png);
+}
+.pvd.mgp {
+  background-image: url(/common/images/slots/mg.png);
+}
+.pvd.ps {
+  background-image: url(/common/images/slots/ps.png);
+}
+.pvd.tsg {
+  background-image: url(/common/images/slots/tsg.png);
+}
+.pvd.sa {
+  background-image: url(/common/images/slots/sa.png);
+}
+.pvd.nt {
+  background-image: url(/common/images/slots/nt.png);
+}
+@media only screen and (max-width: 768px) {
+  .g8sggl .g8sggl-t .ii {
+    width: 110px;
+    font-size: 12px;
+  }
+  .g8sggl .g8sggl-t .ii .ii-tt {
+    padding-top: 50px;
+  }
+  .g8sggl .g8sggl-c .ll {
+    width: 70%;
+  }
+  .g8sggl .g8sggl-c .ll .ii {
+    font-size: 12px;
+    padding: 0 15px;
+    line-height: 34px;
+  }
+  .g8sggl .g8sggl-c .rr {
+    width: 30%;
+  }
+  .g8sggl .searchbar input {
+    line-height: 34px;
+  }
+  .g8sggl .glbox .gl {
+    font-size: 12px;
+  }
+  .g8sggl .glbox .gl .hwrap {
+    display: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .g8sggl .g8sggl-t .ii {
+    width: 90px;
+  }
+  .g8sggl .g8sggl-t .ii .ii-tt {
+    padding-top: 44px;
+  }
+  .g8sggl .g8sggl-c .ll,
+  .g8sggl .g8sggl-c .rr {
+    width: 100%;
+  }
+  .g8sggl .searchbar input {
+    text-align: center;
+  }
+  .g8sggl .glbox .gl .gltext {
+    padding: 4px 10px;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .g8sggl .glbox {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .g8sggl .glbox {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+.g8sggl.ss1 .g8sggl-b,
+.g8sggl.ss1 .g8sggl-t {
+  background-color: #171342;
+}
+.g8sggl.ss1 .g8sggl-c,
+.g8sggl.ss1 .g8sggl-t .ii {
+  background-color: #301d6e;
+}
+.g8sggl.ss1 .g8sggl-t .ii.aaa,
+.g8sggl.ss1 .g8sggl-t .ii:hover,
+.g8sggl.ss1 .glbox .gl .glp,
+.g8sggl.ss1 .searchbar input {
+  background-color: #110e35;
+}
+.g8sggl .glbox .gl .hwrap .hbox .main,
+.g8sggl.ss1 .g8sggl-c .ll .ii.aaa,
+.g8sggl.ss1 .g8sggl-c .ll .ii:hover,
+.g8sggl.ss1 .g8sggl-tarr,
+.g8sggl.ss1 .glbox .gl .gltext {
+  background-color: #842aff;
+}
+.g8sggl .g8sggl-t .ii.aaa,
+.g8sggl .g8sggl-t .ii:hover {
+  background-color: #62ab22;
+  background-blend-mode: inherit;
+}
+.g8sggl .g8sggl-t .ii .badge {
+  position: absolute;
+  width: 34%;
+  left: 0;
+  top: 0;
+}
+.g8sggl .g8sggl-t .ii .badge img {
+  max-width: 100%;
+}
+.g8sggl .glbox .gl .glbadge.joker-hot {
+  right: 0;
+  left: auto;
+  top: 0;
+}
+.pvd-title {
+  margin-left: 10px;
+  color: #352c02;
+}
