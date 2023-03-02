@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         myrtle: '#17350d',
+        shadesMyrtle: '#215114',
         blackfores: '#1c360c',
         christi: '#62ab22',
         conifer: '#b0e455',

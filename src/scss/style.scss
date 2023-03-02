@@ -58,10 +58,10 @@ select {
 
 .desktop-menu {
   li.active {
-    @apply bg-christi text-lemon;
+    @apply bg-shadesMyrtle text-lemon;
   }
   li:hover {
-    @apply bg-christi text-lemon duration-200 ease-in-out;
+    @apply bg-shadesMyrtle text-lemon duration-200 ease-in-out;
   }
 }
 
@@ -158,3 +158,5 @@ select {
     @apply bg-christi text-lemon;
   }
 }
+
+@import 'dropdown';
